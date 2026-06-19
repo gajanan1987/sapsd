@@ -1,0 +1,77 @@
+.btn {
+ height: 36px;
+ border-radius: 25px;
+ cursor: pointer;
+ font-size: 16px;
+ padding: 5px 15px;
+ @include Font-Bold;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+
+ @include mq("t-768", "max") {
+  font-size: 14px;
+  height: 32px;
+ }
+
+ &:disabled {
+  opacity: .5;
+  background-color: gray;
+  cursor: initial;
+  border-color: gray;
+  color: var(--color-white);
+
+  &:hover {
+   background-color: gray;
+  }
+ }
+}
+
+.btn-primary {
+ background-color: var(--color-primary);
+ color: var(--color-white);
+ border: none;
+ transition: all .5s;
+
+ &:hover {
+  background-color: darken($color: #5233ed, $amount: 10%);
+  transition: all .5s;
+ }
+}
+
+.btn-primary-hallow {
+ background-color: var(--color-white);
+ color: var(--color-primary);
+ border: 2px solid var(--color-primary);
+ transition: all .5s;
+
+ &:hover {
+  background-color: darken($color: #5233ed, $amount: 10%);
+  color: var(--color-white);
+  transition: all .5s;
+ }
+}
+
+.btn-danger {
+ background-color: var(--color-error);
+ color: var(--color-white);
+ border: none;
+ transition: all .5s;
+
+ &:hover {
+  background-color: darken($color: #da5050, $amount: 10%);
+  transition: all .5s;
+ }
+}
+
+.btn-green {
+ background-color: var(--color-green);
+ color: var(--color-white);
+ border: none;
+ transition: all .5s;
+
+ &:hover {
+  background-color: darken($color: #008000, $amount: 10%);
+  transition: all .5s;
+ }
+}
