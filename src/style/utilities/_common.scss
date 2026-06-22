@@ -15,7 +15,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
 	color: var(--color-text);
-	@include Font-Medium;
+	@include Font-Regular;
 	overflow: initial !important;
 	font-size: 16px;
 
@@ -184,6 +184,91 @@ th {
 		&.red {
 			color: #ed8c2b;
 		}
+
+		&.code {
+			background-color: #cdcecb;
+		}
+	}
+
+	&.comap-code {
+		thead {
+			tr {
+				th {
+					&:nth-child(1) {
+						background-color: #434343;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	&.sales-org {
+		th {
+			&:nth-child(1) {
+				background-color: #ead1dc;
+			}
+		}
+	}
+
+	&.dis-channel {
+		th {
+			&:nth-child(1) {
+				background-color: #cfe2f3;
+			}
+		}
+	}
+
+	&.division {
+		th {
+			&:nth-child(1) {
+				background-color: #b6d7a8;
+			}
+		}
+	}
+
+	&.sales-ofc {
+		th {
+			&:nth-child(1) {
+				background-color: #ffd966;
+			}
+		}
+	}
+
+	&.sales-group {
+		th {
+			&:nth-child(1) {
+				background-color: #3c78d8;
+				color: #fff;
+			}
+		}
+	}
+
+	&.plant {
+		th {
+			&:nth-child(1) {
+				background-color: #85200c;
+				color: #fff;
+			}
+		}
+	}
+
+	&.st-loc {
+		th {
+			&:nth-child(1) {
+				background-color: #9900ff;
+				color: #fff;
+			}
+		}
+	}
+
+	&.sh-point {
+		th {
+			&:nth-child(1) {
+				background-color: #ff6d01;
+				color: #fff;
+			}
+		}
 	}
 
 	th,
@@ -303,6 +388,18 @@ th {
 				span {
 					@include Font-Medium;
 					color: var(--color-white);
+				}
+			}
+		}
+	}
+}
+
+.definition-table {
+	tbody {
+		tr {
+			td {
+				&:nth-child(2) {
+					font-size: 16px;
 				}
 			}
 		}

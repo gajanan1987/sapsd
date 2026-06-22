@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router";
-import logo from "../../public/logo.svg";
+// import logo from "../../public/logo.svg";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -18,7 +18,7 @@ const Header = () => {
         exact="true"
         onClick={() => setNav(false)}
       >
-        <img src={logo} />
+        SAP SD
       </NavLink>
 
       <Link className="hamburger" onClick={handleHamburger}>
@@ -30,11 +30,6 @@ const Header = () => {
         <li>
           <NavLink to="/" onClick={() => setNav(false)}>
             Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/loancalculator" onClick={() => setNav(false)}>
-            EMI Calculator
           </NavLink>
         </li>
         {!user && (
@@ -49,16 +44,6 @@ const Header = () => {
 
         {user && (
           <>
-            <li>
-              <NavLink to="/loans-list" onClick={() => setNav(false)}>
-                Loans
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/outstanding" onClick={() => setNav(false)}>
-                Outstanding
-              </NavLink>
-            </li>
             <li>
               <NavLink to="/account" onClick={() => setNav(false)}>
                 Account

@@ -1,44 +1,72 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useAuth } from "../../hooks/useAuth";
+import { fetchDefinition, deleteComp } from "../../redux/definationSlice";
+import custMessage from "../../utils/toast";
+import CompanyCard from "../../definition/components/CompanyCard";
+import Banner from "./component/Banner";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const { session, loading } = useAuth();
+  const { user } = useSelector((s) => s.auth);
+
+  const { items, fetchStatus } = useSelector((s) => s.definition);
+
+  // useEffect(() => {
+  //   if (!user) return;
+
+  //   if (fetchStatus === "idle") {
+  //     dispatch(fetchDefinition());
+  //   }
+  // }, [dispatch, user, fetchStatus]);
+
+  useEffect(() => {
+    if (user) {
+      dispatch(fetchDefinition());
+    }
+  }, [dispatch, user]);
+
+  const deleteCompById = useCallback(
+    (id, cname) => {
+      dispatch(deleteComp(id))
+        .unwrap()
+        .then(() => {
+          custMessage.success(`${cname} deleted successfully`);
+        })
+        .catch((err) => {
+          custMessage.error(err.message || "Failed to delete Company Code");
+        });
+    },
+    [dispatch],
+  );
+
+  if (loading || fetchStatus === "loading") {
+    return <p className="loading">Loading...</p>;
+  }
+  const renderCompany = () => {
+    if (fetchStatus === "loading") return <>Loading...</>;
+    if (fetchStatus === "failed")
+      return <h1>Error loading loans. Please try again.</h1>;
+    if (items?.length > 0) {
+      return items.map((item) => {
+        return (
+          <CompanyCard
+            key={item.id}
+            item={item}
+            deleteCompById={deleteCompById}
+          />
+        );
+      });
+    }
+    return <h1>No Enterprise Structure Definition </h1>;
+  };
+
   return (
     <>
-      <div className="bg-animation">
-        <div className="circles">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+      <Banner session={session} user={user} />
 
-      <div className="container">
-        <div className="content">
-          <div className="logo">
-            <img src="https://zllthcfaewfehlioancy.supabase.co/storage/v1/object/public/IMAGES/ChatGPT%20Image%20Jun%2019,%202026,%2011_29_05%20AM.png" />
-          </div>
-
-          <h1>Trident Ink Design</h1>
-          <h2>Something Amazing Is Coming Soon</h2>
-
-          <p>
-            We are building a modern digital experience with creativity,
-            innovation, and technology. Stay tuned for our official launch.
-          </p>
-
-          <a href="javascript:void(0)" className="notify-btn">
-            {" "}
-            Launching Soon{" "}
-          </a>
-        </div>
-      </div>
-
-      <div className="footer">
-        © 2026 TridentInkDesign. All Rights Reserved.
-      </div>
+      {user ? <div className="loan-card-wrapper">{renderCompany()}</div> : null}
     </>
   );
 };
