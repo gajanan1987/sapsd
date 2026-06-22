@@ -2,94 +2,136 @@ import { useState } from "react";
 
 const useDefinitionForm = () => {
   const [formData, setFormData] = useState({
-    companyName: "",
-    companyNameCode: "",
+    company: [
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    companyCodeName: "",
-    companyCodeCode: "",
+    companyCode: [
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    SalesOrgDomName: "",
-    SalesOrgDomCode: "",
+    salesOrganizationDom: [
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    SalesOrgExpName: "",
-    SalesOrgExpCode: "",
+    salesOrganizationExp: [
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    DC1DomName: "",
-    DC1DomNameCode: "",
-    DC2DomName: "",
-    DC2DomNameCode: "",
-    DC3DomName: "",
-    DC3DomNameCode: "",
-    DC4DomName: "",
-    DC4DomNameCode: "",
+    distributionChannelDom: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    DC1ExpName: "",
-    DC1ExpNameCode: "",
+    distributionChannelExp: [
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    Division1Name: "",
-    Division1Code: "",
-    Division2Name: "",
-    Division2Code: "",
-    Division3Name: "",
-    Division3Code: "",
-    Division4Name: "",
-    Division4Code: "",
-    Division5Name: "",
-    Division5Code: "",
-    Division6Name: "",
-    Division6Code: "",
+    division: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    SalesOffName: "",
-    SalesOffCode: "",
+    salesOffice: [
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    SalesGroup1Name: "",
-    SalesGroup1Code: "",
-    SalesGroup2Name: "",
-    SalesGroup2Code: "",
+    salesGroup: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    Plants1Name: "",
-    Plants1Code: "",
-    Plants2Name: "",
-    Plants2Code: "",
+    plant: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    StoLoc1Plant1Name: "",
-    StoLoc1Plant1Code: "",
-    StoLoc2Plant1Name: "",
-    StoLoc2Plant1Code: "",
-    StoLoc3Plant1Name: "",
-    StoLoc3Plant1Code: "",
-    StoLoc4Plant1Name: "",
-    StoLoc4Plant1Code: "",
-    StoLoc5Plant1Name: "",
-    StoLoc5Plant1Code: "",
+    storageLocationP1: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    StoLoc1Plant2Name: "",
-    StoLoc1Plant2Code: "",
-    StoLoc2Plant2Name: "",
-    StoLoc2Plant2Code: "",
-    StoLoc3Plant2Name: "",
-    StoLoc3Plant2Code: "",
-    StoLoc4Plant2Name: "",
-    StoLoc4Plant2Code: "",
-    StoLoc5Plant2Name: "",
-    StoLoc5Plant2Code: "",
+    storageLocationP2: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    ShiPoint1Plant1Name: "",
-    ShiPoint1Plant1Code: "",
-    ShiPoint2Plant1Name: "",
-    ShiPoint2Plant1Code: "",
-    ShiPoint3Plant1Name: "",
-    ShiPoint3Plant1Code: "",
+    shippingPointP1: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
 
-    ShiPoint1Plant2Name: "",
-    ShiPoint1Plant2Code: "",
-    ShiPoint2Plant2Name: "",
-    ShiPoint2Plant2Code: "",
-    ShiPoint3Plant2Name: "",
-    ShiPoint3Plant2Code: "",
+    shippingPointP2: [
+      {
+        name: "",
+        code: "",
+      },
+      {
+        name: "",
+        code: "",
+      },
+    ],
   });
-
-  const [calculated, setCalculated] = useState(false);
 
   // Required fields only
   const requiredFields = [
@@ -133,25 +175,9 @@ const useDefinitionForm = () => {
   // True if ANY required field is empty
   const isInvalid = requiredFields.some((field) => !formData[field]?.trim());
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-
-    setCalculated(false);
-  };
-
   return {
     formData,
-    calculated,
-    isInvalid,
-    handleChange,
-    setCalculated,
     setFormData,
-    requiredFields,
   };
 };
 

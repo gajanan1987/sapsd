@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
 import { fetchDefinition, deleteComp } from "../../redux/definationSlice";
 import custMessage from "../../utils/toast";
-import CompanyCard from "../../definition/components/CompanyCard";
+import CompanyCard from "./component/CompanyCard";
 import Banner from "./component/Banner";
 
 const Home = () => {
@@ -12,14 +12,6 @@ const Home = () => {
   const { user } = useSelector((s) => s.auth);
 
   const { items, fetchStatus } = useSelector((s) => s.definition);
-
-  // useEffect(() => {
-  //   if (!user) return;
-
-  //   if (fetchStatus === "idle") {
-  //     dispatch(fetchDefinition());
-  //   }
-  // }, [dispatch, user, fetchStatus]);
 
   useEffect(() => {
     if (user) {
@@ -49,7 +41,7 @@ const Home = () => {
     if (fetchStatus === "failed")
       return <h1>Error loading loans. Please try again.</h1>;
     if (items?.length > 0) {
-      return items.map((item) => {
+      return items.map((item, i) => {
         return (
           <CompanyCard
             key={item.id}

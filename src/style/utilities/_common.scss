@@ -278,6 +278,7 @@ th {
 		border-right: 1px solid #c7bebe;
 		color: var(--color-black);
 		text-align: center;
+		vertical-align: middle;
 	}
 
 
@@ -388,6 +389,111 @@ th {
 				span {
 					@include Font-Medium;
 					color: var(--color-white);
+				}
+			}
+		}
+	}
+}
+
+//assignment-table
+.assignment-table-wrapper {
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		font-weight: 800;
+		// color: var(--color-link);
+	}
+}
+
+.assignment-table {
+	border: 2px solid #000;
+
+	thead {
+		tr {
+			th {
+				font-size: 18px;
+				font-weight: 900;
+				border-bottom: 2px solid #000;
+				border-right: 2px solid #000;
+
+				x &.ccode {
+					background-color: #434343;
+					color: #fff;
+				}
+
+				&.sorg {
+					background-color: #ead1dc;
+				}
+
+				&.dchl {
+					background-color: #cfe2f3;
+				}
+
+				&.division {
+					background-color: #b6d7a8;
+				}
+
+				&.soffice {
+					background-color: #ffd966;
+				}
+
+				&.sgroup {
+					background-color: #3c78d8;
+					color: #fff;
+				}
+
+				&.plant {
+					background-color: #85200c;
+					color: #fff;
+				}
+
+				&.spoint {
+					background-color: #ff6d01;
+					color: #fff;
+				}
+
+				&:not([class]) {
+					font-size: 13px;
+					font-weight: 500;
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				&:nth-child(even) {
+					font-size: 12px;
+				}
+
+				&:nth-child(odd) {
+					font-size: 15px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+
+
+	&.revstyle {
+		tbody {
+			tr {
+				td {
+
+					&:nth-child(1),
+					&:nth-child(2) {
+						font-size: 15px;
+						font-weight: 600;
+					}
+
+					&:nth-child(3),
+					&:nth-child(3) {
+						font-size: 12px;
+						font-weight: 400;
+					}
 				}
 			}
 		}

@@ -6,8 +6,8 @@ const Home = lazy(() => import("../pages/home/Home"));
 const AuthPage = lazy(() => import("../pages/auth/AuthPage"));
 const DefinitionPage = lazy(() => import("../pages/definition/codedefinition"));
 const AccountPage = lazy(() => import("../pages/account/Account"));
-const EnterpriseFormPage = lazy(
-  () => import("../pages/enterprise/EnterpriseForm"),
+const EnterpriseStructure = lazy(
+  () => import("../pages/enterprise/enterprise"),
 );
 const CompDetailsPage = lazy(
   () => import("../pages/compdetails/CompanyDetails"),
@@ -27,7 +27,7 @@ const AppRoutes = () => {
           <Route path="/account" element={<AccountPage />} />
           <Route path="/definition" element={<DefinitionPage />} />
           <Route path="/Comp-details" element={<CompDetailsPage />} />
-          <Route path="/enterprise" element={<EnterpriseFormPage />} />
+          <Route path="/enterprise" element={<EnterpriseStructure />} />
         </Route>
       </Routes>
     </Suspense>

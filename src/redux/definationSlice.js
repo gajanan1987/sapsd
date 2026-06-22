@@ -7,18 +7,18 @@ import supabase from "../services/supabase";
 import { signOut } from "./authSlice";
 
 // ✅ Create Defination
-export const createDefination = createAsyncThunk(
-  "definition/createDefination",
-  async ({ definition }, { rejectWithValue }) => {
-    const { error, data } = await supabase
-      .from("definition")
-      .insert([definition])
-      .select()
-      .single();
-    if (error) return rejectWithValue(error.message);
-    return { ...data };
-  },
-);
+// export const createDefination = createAsyncThunk(
+//   "definition/createDefination",
+//   async ({ definition }, { rejectWithValue }) => {
+//     const { error, data } = await supabase
+//       .from("definition")
+//       .insert([definition])
+//       .select()
+//       .single();
+//     if (error) return rejectWithValue(error.message);
+//     return { ...data };
+//   },
+// );
 
 // ✅ Fetch Loans
 export const fetchDefinition = createAsyncThunk(
@@ -29,7 +29,7 @@ export const fetchDefinition = createAsyncThunk(
     } = getState();
     if (!user) return [];
     const { data, error } = await supabase
-      .from("definition")
+      .from("enterprisestructure")
       .select("*")
       .eq("user_id", user.id);
     if (error) return rejectWithValue(error.message);
@@ -42,7 +42,7 @@ export const deleteComp = createAsyncThunk(
   "loans/deleteComp",
   async (compId, { rejectWithValue }) => {
     const { error } = await supabase
-      .from("definition")
+      .from("enterprisestructure")
       .delete()
       .eq("id", compId);
     if (error) return rejectWithValue(error.message);
@@ -54,7 +54,7 @@ export const compDetails = createAsyncThunk(
   "loans/compDetails",
   async (Id, { rejectWithValue }) => {
     const { error, data } = await supabase
-      .from("definition")
+      .from("enterprisestructure")
       .select("*")
       .eq("id", Id)
       .single();
@@ -68,15 +68,14 @@ export const createDefinations = createAsyncThunk(
 
   async ({ definition }, { rejectWithValue }) => {
     const { data, error } = await supabase
-      .from("enterprise")
+      .from("enterprisestructure")
       .insert([definition])
       .select()
       .single();
-    console.log("🚀 ~ error:", error);
 
     if (error) return rejectWithValue(error.message);
 
-    return data;
+    return { ...data };
   },
 );
 
@@ -108,15 +107,15 @@ const defineSlice = createSlice({
     builder
 
       // Create
-      .addCase(createDefination.pending, (s) => {
+      .addCase(createDefinations.pending, (s) => {
         s.status = "loading";
         s.error = null;
       })
-      .addCase(createDefination.fulfilled, (s, a) => {
+      .addCase(createDefinations.fulfilled, (s, a) => {
         s.status = "succeeded";
         s.items.unshift(a.payload);
       })
-      .addCase(createDefination.rejected, (s, a) => {
+      .addCase(createDefinations.rejected, (s, a) => {
         s.status = "failed";
         s.error = a.payload;
       })

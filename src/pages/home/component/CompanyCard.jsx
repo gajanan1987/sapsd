@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { compDetails } from "../../redux/definationSlice";
+import { compDetails } from "../../../redux/definationSlice";
 import { useNavigate } from "react-router";
-const CompanyCard = ({ item, key, deleteCompById }) => {
+const CompanyCard = ({ item, deleteCompById }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { cc_code, cc_name, id } = item;
+  const { company_code, id } = item;
   // const remEmi = remaningEmi === 0;
 
   const handleClick = async (id) => {
@@ -13,7 +13,7 @@ const CompanyCard = ({ item, key, deleteCompById }) => {
   };
 
   const handleDelete = (e) => {
-    deleteCompById(id, cc_name);
+    deleteCompById(id, company_code[0].name);
     e.stopPropagation();
   };
   const handleEdit = async (e) => {
@@ -24,9 +24,9 @@ const CompanyCard = ({ item, key, deleteCompById }) => {
     <div className={`loan-card`} onClick={() => handleClick(id)}>
       <div className="left">
         <p className="loan-name" style={{ marginBottom: "3px" }}>
-          Company Code: {cc_name}
+          Company Code: {company_code[0].code}
         </p>
-        <p className="f14">Code: {cc_code}</p>
+        <p className="f14">Name: {company_code[0].name}</p>
       </div>
       <div className="right">
         <button className="btn btn-danger" onClick={handleDelete}>
