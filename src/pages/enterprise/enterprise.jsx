@@ -36,7 +36,7 @@ const EnterpriseStructure = () => {
         columns={[
           { key: "salesOrgCode", label: "SOrg", thclass: "sorg" },
           { key: "salesOrgName", label: "Name" },
-          { key: "dcCode", label: "DChl", thclass: "dchl", thclass: "dchl" },
+          { key: "dcCode", label: "DChl", thclass: "dchl" },
           { key: "dcName", label: "Name" },
         ]}
         data={result.distributionChannelToSalesOrg}
