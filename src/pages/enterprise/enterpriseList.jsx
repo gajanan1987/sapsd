@@ -5,7 +5,7 @@ import { generateEnterpriseAssignments } from "../../utils/enterpriseGenerator";
 import { fetchDefinition } from "../../redux/definationSlice";
 import AssignmentTable from "./component/AssignmentTable";
 import { useLocation } from "react-router-dom";
-import EnterpriseCard from "./component/enterpriseCard";
+import EnterpriseCard from "./component/EnterpriseCard";
 
 const EnterpriseStructure = () => {
   const dispatch = useDispatch();
