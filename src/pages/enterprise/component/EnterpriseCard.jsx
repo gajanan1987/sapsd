@@ -8,8 +8,6 @@ const EnterpriseCard = ({ item, status }) => {
 
   const handleClick = async (id) => {
     const data = await dispatch(compDetails(id));
-    console.log("🚀 ~ handleClick ~ data:", data.payload);
-    // return;
     navigate("/enterprise", { state: data.payload });
   };
 

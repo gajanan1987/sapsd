@@ -2,11 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { compDetails } from "../../../redux/definationSlice";
 import { useNavigate } from "react-router";
 const CompanyCard = ({ item, deleteCompById }) => {
-  console.log("🚀 ~ CompanyCard ~ item:", item);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { company_code, id } = item;
-  // const remEmi = remaningEmi === 0;
 
   const handleClick = async (id) => {
     const data = await dispatch(compDetails(id));
