@@ -103,7 +103,7 @@ const CompanyDetails = () => {
 
               <DefinitionTable
                 cname="sh-point"
-                name="Shipping Point (Plant 1)"
+                name="Shipping Point"
                 data={[...shipping_point_p1, ...shipping_point_p2]}
               />
             </div>

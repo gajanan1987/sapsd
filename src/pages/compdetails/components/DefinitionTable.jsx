@@ -14,8 +14,8 @@ const DefinitionTable = ({ name, data = [], cname }) => {
       <tbody>
         {filteredData.map((item, index) => (
           <tr className="tr-year" key={`${item.name}-${index}`}>
-            <td>{item.name || "-"}</td>
             <td>{item.code || "-"}</td>
+            <td>{item.name || "-"}</td>
           </tr>
         ))}
       </tbody>
