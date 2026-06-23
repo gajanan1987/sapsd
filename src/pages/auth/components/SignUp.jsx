@@ -11,6 +11,7 @@ const SignUp = ({ setMode }) => {
     fname: "",
     lname: "",
     email: "",
+    mobile: "",
     password: "",
     confirmPassword: "",
     address: "",
@@ -22,6 +23,8 @@ const SignUp = ({ setMode }) => {
 
   const isInvalid =
     !formData.email ||
+    !formData.fname ||
+    !formData.lname ||
     !formData.password ||
     formData.password !== formData.confirmPassword ||
     formData.password.length < 6;
@@ -46,7 +49,7 @@ const SignUp = ({ setMode }) => {
     e.preventDefault();
     if (isInvalid) return;
 
-    const { fname, lname, address, email, password } = formData;
+    const { fname, lname, address, email, password, mobile } = formData;
 
     try {
       const { user } = await dispatch(signUp({ email, password })).unwrap();
@@ -59,6 +62,7 @@ const SignUp = ({ setMode }) => {
           address: address || "",
           password: password || "",
           email: email || "",
+          mobile: mobile || "",
           role: "user",
         };
         await dispatch(addProfile({ ...data, avatarFile })).unwrap();
@@ -102,6 +106,16 @@ const SignUp = ({ setMode }) => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Email"
+          required
+        />
+
+        <Input
+          type="number"
+          name="mobile"
+          label="Enter Mobile Number"
+          value={formData.mobile}
+          onChange={handleChange}
+          placeholder="Mobile"
           required
         />
 

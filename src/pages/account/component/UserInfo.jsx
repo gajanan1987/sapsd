@@ -13,7 +13,7 @@ const UserInfo = () => {
   const navigate = useNavigate();
 
   const { status, error, user, profile, profileStatus } = useSelector(
-    (s) => s.auth
+    (s) => s.auth,
   );
 
   const [open, setOpen] = useState(false);

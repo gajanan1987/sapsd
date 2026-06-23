@@ -157,7 +157,17 @@ export const getProfile = createAsyncThunk(
 export const addProfile = createAsyncThunk(
   "auth/addProfile",
   async (
-    { userId, fname, lname, address, password, email, role, avatarFile },
+    {
+      userId,
+      fname,
+      lname,
+      address,
+      password,
+      email,
+      mobile,
+      role,
+      avatarFile,
+    },
     { rejectWithValue },
   ) => {
     try {
@@ -178,6 +188,7 @@ export const addProfile = createAsyncThunk(
             email,
             password,
             role,
+            mobile,
             avatar_url: avatarData.avatar_url,
             avatar_path: avatarData.avatar_path,
           },
