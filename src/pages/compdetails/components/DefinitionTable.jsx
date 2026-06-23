@@ -7,7 +7,7 @@ const DefinitionTable = ({ name, data = [], cname }) => {
       <thead>
         <tr>
           <th>{name}</th>
-          <th className="code">Code</th>
+          <th className="code">Name</th>
         </tr>
       </thead>
 
