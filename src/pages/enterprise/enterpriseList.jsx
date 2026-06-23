@@ -24,9 +24,7 @@ const EnterpriseStructure = () => {
         </Link>
         <h1>Enterprise Structure Assignment List</h1>
       </div>
-      <div>
-        <EnterpriseCard item={items} status={fetchStatus} />
-      </div>
+      <EnterpriseCard item={items} status={fetchStatus} />
     </div>
   );
 };

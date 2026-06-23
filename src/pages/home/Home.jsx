@@ -51,7 +51,7 @@ const Home = () => {
         );
       });
     }
-    return <h1>No Enterprise Structure Definition </h1>;
+    return <h1 className="no-data-msg">No Enterprise Structure Definition </h1>;
   };
 
   return (
