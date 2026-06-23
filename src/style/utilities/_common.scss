@@ -146,8 +146,8 @@ th {
 .common-table {
 	background-color: #eee;
 	border-radius: 8px;
-	border: 1px solid #c7bebe;
-	border-right: none;
+	border: 2px solid #000;
+	// border-right: none;
 
 	th {
 		background-color: #dedede;
@@ -274,9 +274,17 @@ th {
 		}
 	}
 
-	th,
+	th {
+		padding: 8px 10px;
+		border-bottom: 2px solid #000;
+		border-right: 2px solid #000;
+		color: var(--color-black);
+		text-align: center;
+		vertical-align: middle;
+	}
+
 	td {
-		padding: 10px;
+		padding: 6px 10px;
 		border-bottom: 1px solid #c7bebe;
 		border-right: 1px solid #c7bebe;
 		color: var(--color-black);
@@ -409,15 +417,12 @@ th {
 }
 
 .assignment-table {
-	border: 2px solid #000;
 
 	thead {
 		tr {
 			th {
 				font-size: 18px;
 				font-weight: 900;
-				border-bottom: 2px solid #000;
-				border-right: 2px solid #000;
 
 				x &.ccode {
 					background-color: #434343;
