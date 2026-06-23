@@ -4,7 +4,7 @@ import supabase from "../services/supabase";
  * Upload avatar file and (optionally) delete the old one
  */
 export async function uploadAvatar(userId, file, oldPath = null) {
-  const bucket = "emi";
+  const bucket = "profileimg";
   const folder = "avatars";
 
   try {

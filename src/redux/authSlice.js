@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import supabase from "../services/supabase";
-// import { uploadAvatar } from "../utils/uploadAvatar";
+import { uploadAvatar } from "../utils/uploadAvatar";
 
 export const signUp = createAsyncThunk(
   "auth/signUp",
@@ -68,7 +68,7 @@ export const fetchSession = createAsyncThunk("auth/fetchSession", async () => {
 export const uploadAndReplaceAvatar = createAsyncThunk(
   "auth/uploadAndReplaceAvatar",
   async (
-    { file, userId, bucket = "emi", folder = "avatars" },
+    { file, userId, bucket = "profileimg", folder = "avatars" },
     { getState, rejectWithValue },
   ) => {
     try {
@@ -178,6 +178,8 @@ export const addProfile = createAsyncThunk(
             email,
             password,
             role,
+            avatar_url: avatarData.avatar_url,
+            avatar_path: avatarData.avatar_path,
           },
         ])
         .select()
@@ -320,9 +322,9 @@ const authSlice = createSlice({
       })
 
       /// Add Profile
-      // .addCase(addProfile.fulfilled, (state, action) => {
-      //   state.profile = [action.payload];
-      // })
+      .addCase(addProfile.fulfilled, (state, action) => {
+        state.profile = [action.payload];
+      })
 
       /// Update Profile
       .addCase(updateProfile.fulfilled, (state, action) => {

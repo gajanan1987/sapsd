@@ -36,7 +36,7 @@ const Banner = ({ session, user }) => {
                 and learners create, manage, and document Enterprise Structure
                 Definitions and Assignments quickly and accurately.
               </p>
-              <div class="bullet-points">
+              <div className="bullet-points">
                 <ul>
                   <li>✅ Create Enterprise Structure Definitions</li>
                   <li>
