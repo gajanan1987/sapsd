@@ -26,29 +26,56 @@ const Banner = ({ session, user }) => {
             />
           </div>
 
-          <h2>
-            Simplifying Enterprise Structure Definition & Assignment Management
-            for Everyone
-          </h2>
+          <h2>Simplify Enterprise Structure Definition & Assignment</h2>
 
           {!user ? (
             <>
               <p>
-                Managing Definition & Assignment doesn’t have to be complicated.
-                Our platform makes it easy to:
+                Managing SAP SD Enterprise Structure configuration doesn't have
+                to be complex. This platform helps SAP consultants, trainers,
+                and learners create, manage, and document Enterprise Structure
+                Definitions and Assignments quickly and accurately.
               </p>
-              <ul>
-                <li>Track Enterprise Structure Definition in real-time</li>
-                <li>Track Enterprise Structure Assignment in real-time</li>
-                <li>Automate Enterprise Structure Assignment</li>
-                <li>Monitor Definition and Assignment with accuracy</li>
-              </ul>
+              <div class="bullet-points">
+                <ul>
+                  <li>✅ Create Enterprise Structure Definitions</li>
+                  <li>
+                    ✅ Generate Enterprise Structure Assignments Automatically
+                  </li>
+                  <li>✅ Track Definitions in Real-Time</li>
+                  <li>✅ Track Assignments in Real-Time</li>
+                  <li>✅ Reduce Manual Configuration Errors</li>
+                  <li>
+                    ✅ Copy & Paste Assignment Tables into SAP Documentation
+                  </li>
+                  <li>
+                    ✅ Generate SAP SD Enterprise Structure Mapping Instantly
+                  </li>
+                  <li>✅ Save and Manage Multiple Enterprise Structures</li>
+                  <li>
+                    ✅ Perfect for SAP SD Learning, Practice, Training, and
+                    Projects
+                  </li>
+                </ul>
+                <ul style={{ listStyleType: "disc" }}>
+                  <p style={{ marginBottom: "10px" }}>
+                    Supported SAP SD Assignments
+                  </p>
+                  <li>Sales Organization → Company Code</li>
+                  <li>Distribution Channel → Sales Organization</li>
+                  <li>Division → Sales Organization</li>
+                  <li>Sales Area Determination</li>
+                  <li>Sales Office → Sales Area</li>
+                  <li>Sales Group → Sales Office</li>
+                  <li>Plant → Company Code</li>
+                  <li>Sales Organization + Distribution Channel + Plant</li>
+                  <li>Shipping Point → Plant</li>
+                </ul>
+              </div>
             </>
           ) : null}
 
-          <p>
-            Create and Save your Enterprise Structure Definition & Assignment
-          </p>
+          <p>Start Building SAP SD Enterprise Structures</p>
           <Link
             className="btn btn-primary"
             to={user ? "/definition" : "/login"}

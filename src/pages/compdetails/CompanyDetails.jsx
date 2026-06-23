@@ -37,13 +37,15 @@ const CompanyDetails = () => {
 
   return (
     <div className="loan-details-wrapper">
-      <Link className="btn btn-primary btn-back" to="/">
-        Back
-      </Link>
+      <div className="btn-grp">
+        <Link className="btn btn-primary btn-back" to="/">
+          Back
+        </Link>
 
-      <button className="btn btn-primary" onClick={() => handeEnterprise()}>
-        Genrate Enterprise Structure
-      </button>
+        <button className="btn btn-primary" onClick={() => handeEnterprise()}>
+          Genrate Enterprise Structure
+        </button>
+      </div>
       {company_code && (
         <>
           <div className="loan-details-header">

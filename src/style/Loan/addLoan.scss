@@ -7,6 +7,11 @@
   margin-bottom: 15px;
  }
 
+ .btn-grp {
+  display: flex;
+  justify-content: space-between;
+ }
+
  .btn-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -144,6 +149,19 @@
 
    .input-wrapper {
     flex: 1;
+   }
+  }
+
+  .btn-wrapper {
+   display: flex;
+   justify-content: flex-end;
+   padding: 0 15px 15px;
+
+   .btn {
+    font-size: 12px;
+    border: 1px solid;
+    height: auto;
+    font-weight: 500;
    }
   }
  }

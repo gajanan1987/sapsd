@@ -250,9 +250,14 @@ const AddLoan = () => {
                 />
               </div>
             ))}
-            <button onClick={() => addRow("distributionChannelDom")}>
-              Add
-            </button>
+            <div className="btn-wrapper">
+              <button
+                className="btn btn-primary-hallow"
+                onClick={() => addRow("distributionChannelDom")}
+              >
+                Add More
+              </button>
+            </div>
           </div>
           <div>
             {formData.distributionChannelExp.map((item, index) => (
@@ -319,7 +324,14 @@ const AddLoan = () => {
                 />
               </div>
             ))}
-            <button onClick={() => addRow("division")}>Add</button>
+            <div className="btn-wrapper">
+              <button
+                className="btn btn-primary-hallow"
+                onClick={() => addRow("division")}
+              >
+                Add More
+              </button>
+            </div>
           </div>
         </div>
 
@@ -450,7 +462,14 @@ const AddLoan = () => {
                 />
               </div>
             ))}
-            <button onClick={() => addRow("storageLocationP1")}>Add</button>
+            <div className="btn-wrapper">
+              <button
+                className="btn btn-primary-hallow"
+                onClick={() => addRow("storageLocationP1")}
+              >
+                Add More
+              </button>
+            </div>
           </div>
           <div>
             {formData.storageLocationP2.map((item, index) => (
@@ -487,7 +506,14 @@ const AddLoan = () => {
                 />
               </div>
             ))}
-            <button onClick={() => addRow("storageLocationP2")}>Add</button>
+            <div className="btn-wrapper">
+              <button
+                className="btn btn-primary-hallow"
+                onClick={() => addRow("storageLocationP2")}
+              >
+                Add More
+              </button>
+            </div>
           </div>
         </div>
 
@@ -528,7 +554,14 @@ const AddLoan = () => {
                 />
               </div>
             ))}
-            <button onClick={() => addRow("shippingPointP1")}>Add</button>
+            <div className="btn-wrapper">
+              <button
+                className="btn btn-primary-hallow"
+                onClick={() => addRow("shippingPointP1")}
+              >
+                Add More
+              </button>
+            </div>
           </div>
           <div>
             {formData.shippingPointP2.map((item, index) => (
@@ -565,7 +598,14 @@ const AddLoan = () => {
                 />
               </div>
             ))}
-            <button onClick={() => addRow("shippingPointP2")}>Add</button>
+            <div className="btn-wrapper">
+              <button
+                className="btn btn-primary-hallow"
+                onClick={() => addRow("shippingPointP2")}
+              >
+                Add More
+              </button>
+            </div>
           </div>
         </div>
         <div className="btn-wrapper">
@@ -574,7 +614,7 @@ const AddLoan = () => {
             onClick={handleSubmit}
             // disabled={isInvalid}
           >
-            Calculate
+            Save
           </button>
         </div>
       </div>

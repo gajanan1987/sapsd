@@ -37,7 +37,7 @@
 
 .home-banner {
  >div {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 24px;
@@ -131,6 +131,12 @@
   img {
    max-width: 600px;
   }
+ }
+
+ .bullet-points {
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
  }
 
 
