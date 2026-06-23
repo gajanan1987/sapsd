@@ -58,7 +58,7 @@ const Home = () => {
     <>
       <Banner session={session} user={user} />
 
-      {user ? <div className="loan-card-wrapper">{renderCompany()}</div> : null}
+      {user ? <div className="card-wrapper">{renderCompany()}</div> : null}
     </>
   );
 };

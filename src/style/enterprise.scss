@@ -1,0 +1,18 @@
+.enterprise-list-wrapper {
+ .page-header {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 24px;
+
+  h1 {
+   flex: 1;
+   text-align: center;
+  }
+
+  .btn-back {
+   display: inline-flex;
+   align-items: center;
+   margin-bottom: 15px;
+  }
+ }
+}

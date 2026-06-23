@@ -18,7 +18,7 @@ const Header = () => {
         exact="true"
         onClick={() => setNav(false)}
       >
-        SAP SD
+        <img src="https://zllthcfaewfehlioancy.supabase.co/storage/v1/object/public/IMAGES/logo.png" />
       </NavLink>
 
       <Link className="hamburger" onClick={handleHamburger}>
@@ -44,6 +44,11 @@ const Header = () => {
 
         {user && (
           <>
+            <li>
+              <NavLink to="/enterprise-list" onClick={() => setNav(false)}>
+                Enterprise Structure
+              </NavLink>
+            </li>
             <li>
               <NavLink to="/account" onClick={() => setNav(false)}>
                 Account

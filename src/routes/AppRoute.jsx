@@ -9,6 +9,10 @@ const AccountPage = lazy(() => import("../pages/account/Account"));
 const EnterpriseStructure = lazy(
   () => import("../pages/enterprise/enterprise"),
 );
+
+const EnterpriseStructureList = lazy(
+  () => import("../pages/enterprise/enterpriseList"),
+);
 const CompDetailsPage = lazy(
   () => import("../pages/compdetails/CompanyDetails"),
 );
@@ -28,6 +32,10 @@ const AppRoutes = () => {
           <Route path="/definition" element={<DefinitionPage />} />
           <Route path="/Comp-details" element={<CompDetailsPage />} />
           <Route path="/enterprise" element={<EnterpriseStructure />} />
+          <Route
+            path="/enterprise-list"
+            element={<EnterpriseStructureList />}
+          />
         </Route>
       </Routes>
     </Suspense>

@@ -22,7 +22,7 @@ import { signOut } from "./authSlice";
 
 // ✅ Fetch Loans
 export const fetchDefinition = createAsyncThunk(
-  "loans/fetchDefinition",
+  "definition/fetchDefinition",
   async (_, { rejectWithValue, getState }) => {
     const {
       auth: { user },
@@ -39,7 +39,7 @@ export const fetchDefinition = createAsyncThunk(
 
 // ✅ Delete Loan
 export const deleteComp = createAsyncThunk(
-  "loans/deleteComp",
+  "definition/deleteComp",
   async (compId, { rejectWithValue }) => {
     const { error } = await supabase
       .from("enterprisestructure")
@@ -51,7 +51,7 @@ export const deleteComp = createAsyncThunk(
 );
 
 export const compDetails = createAsyncThunk(
-  "loans/compDetails",
+  "definition/compDetails",
   async (Id, { rejectWithValue }) => {
     const { error, data } = await supabase
       .from("enterprisestructure")

@@ -10,10 +10,12 @@
  z-index: 999;
 
  .logo {
+  display: flex;
+
   img {
-   @include mq("t-768", "max") {
-    max-width: 120px;
-   }
+   max-width: 120px;
+
+   @include mq("t-768", "max") {}
   }
  }
 

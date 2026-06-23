@@ -7,13 +7,11 @@ import { useLocation } from "react-router-dom";
 
 const EnterpriseStructure = () => {
   const location = useLocation();
+  console.log("🚀 ~ EnterpriseStructure ~ location:", location);
 
   const compData = location.state;
   const result = generateEnterpriseAssignments(compData);
-  console.log(
-    "🚀 ~ EnterpriseStructure ~ result.shippingPointToPlant:",
-    result.shippingPointToPlant,
-  );
+
   return (
     <div className="loan-details-wrapper">
       <Link className="btn btn-primary btn-back" to="/">

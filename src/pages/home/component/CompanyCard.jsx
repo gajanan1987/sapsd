@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { compDetails } from "../../../redux/definationSlice";
 import { useNavigate } from "react-router";
 const CompanyCard = ({ item, deleteCompById }) => {
+  console.log("🚀 ~ CompanyCard ~ item:", item);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { company_code, id } = item;
@@ -21,9 +22,9 @@ const CompanyCard = ({ item, deleteCompById }) => {
     getLoanDetails(id, "edit");
   };
   return (
-    <div className={`loan-card`} onClick={() => handleClick(id)}>
+    <div className={`card`} onClick={() => handleClick(id)}>
       <div className="left">
-        <p className="loan-name" style={{ marginBottom: "3px" }}>
+        <p className="comp-code" style={{ marginBottom: "3px" }}>
           Company Code: {company_code[0].code}
         </p>
         <p className="f14">Name: {company_code[0].name}</p>

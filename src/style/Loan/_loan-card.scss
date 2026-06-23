@@ -1,10 +1,10 @@
-.loan-card-wrapper {
+.card-wrapper {
  display: flex;
  flex-wrap: wrap;
  row-gap: 15px;
  column-gap: 15px;
 
- .loan-card {
+ .card {
   display: flex;
   flex-direction: row;
   flex: calc(25% - 12px) 0 0;
@@ -12,7 +12,7 @@
   padding: 15px;
   border: 1px solid var(--color-border);
 
-  .loan-name {
+  .comp-code {
    color: var(--color-title);
    @include Font-Bold;
    text-transform: capitalize;
@@ -43,50 +43,11 @@
    }
   }
 
-  &.loan-done {
-   background-color: rgba(32, 173, 3, .5);
-   border-color: #008515;
-  }
+  // &.loan-done {
+  //  background-color: rgba(32, 173, 3, .5);
+  //  border-color: #008515;
+  // }
  }
 
 
-}
-
-////////////
-.loandetails-card {
- display: flex;
- flex-wrap: wrap;
- row-gap: 15px;
- column-gap: 15px;
-
- >div {
-  flex: calc(20% - 12px) 0 0;
-  row-gap: 15px;
-  column-gap: 15px;
-  padding: 15px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  box-shadow: 4px 3px 5px 3px rgba(4, 9, 66, 0.64);
-  -webkit-box-shadow: 4px 3px 5px 0px rgba(4, 9, 66, 0.64);
-  -moz-box-shadow: 4px 3px 5px 0px rgba(4, 9, 66, 0.64);
-  background-color: antiquewhite;
-  position: relative;
-  font-size: 14px;
-
-  @include mq("t-768", "max") {
-   flex: calc(100% - 0px) 0 0;
-  }
-
-  .emi-no {
-   position: absolute;
-   top: 3px;
-   right: 3px;
-   font-size: 11px;
-   font-weight: 700;
-  }
-
-  &.emi-done {
-   background-color: aquamarine;
-  }
- }
 }
