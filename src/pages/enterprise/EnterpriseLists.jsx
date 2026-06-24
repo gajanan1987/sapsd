@@ -7,7 +7,7 @@ import AssignmentTable from "./component/AssignmentTable";
 import { useLocation } from "react-router-dom";
 import EnterpriseCard from "./component/EnterpriseCard";
 
-const EnterpriseStructure = () => {
+const EnterpriseLists = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((s) => s.auth);
   useEffect(() => {
@@ -29,4 +29,4 @@ const EnterpriseStructure = () => {
   );
 };
 
-export default EnterpriseStructure;
+export default EnterpriseLists;
