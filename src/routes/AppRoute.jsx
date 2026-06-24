@@ -4,7 +4,7 @@ import ProtectedRotes from "./ProtectedRotes";
 
 const Home = lazy(() => import("../pages/home/Home"));
 const AuthPage = lazy(() => import("../pages/auth/AuthPage"));
-const DefinitionPage = lazy(() => import("../pages/definition/CodeDefinition"));
+const DefinitionPage = lazy(() => import("../pages/definition/DefineComapany"));
 const AccountPage = lazy(() => import("../pages/account/Account"));
 const EnterpriseStructure = lazy(
   () => import("../pages/enterprise/EnterpriseStructure"),
