@@ -11,7 +11,7 @@ const EnterpriseStructure = lazy(
 );
 
 const EnterpriseStructureList = lazy(
-  () => import("../pages/enterprise/EnterpriseList"),
+  () => import("../pages/enterprise/EnterpriseLists"),
 );
 const CompDetailsPage = lazy(
   () => import("../pages/compdetails/CompanyDetails"),
