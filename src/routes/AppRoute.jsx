@@ -4,14 +4,14 @@ import ProtectedRotes from "./ProtectedRotes";
 
 const Home = lazy(() => import("../pages/home/Home"));
 const AuthPage = lazy(() => import("../pages/auth/AuthPage"));
-const DefinitionPage = lazy(() => import("../pages/definition/codedefinition"));
+const DefinitionPage = lazy(() => import("../pages/definition/CodeDefinition"));
 const AccountPage = lazy(() => import("../pages/account/Account"));
 const EnterpriseStructure = lazy(
-  () => import("../pages/enterprise/enterprise"),
+  () => import("../pages/enterprise/EnterpriseStructure"),
 );
 
 const EnterpriseStructureList = lazy(
-  () => import("../pages/enterprise/enterpriseList"),
+  () => import("../pages/enterprise/EnterpriseList"),
 );
 const CompDetailsPage = lazy(
   () => import("../pages/compdetails/CompanyDetails"),

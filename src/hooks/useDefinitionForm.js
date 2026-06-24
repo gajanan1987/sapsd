@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { compDetails } from "../redux/definationSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const useDefinitionForm = () => {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     company: [
       {

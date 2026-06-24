@@ -6,10 +6,10 @@ const EnterpriseCard = ({ item, status }) => {
   const navigate = useNavigate();
   const { id } = item?.[0] || {};
 
-  const { items, fetchStatus } = useSelector((s) => s.definition);
+  // const { items, fetchStatus } = useSelector((s) => s.definition);
 
   const handleClick = async (id) => {
-    const data = await dispatch(compDetails(id));
+    const data = await dispatch(compDetails({ Id: id }));
     navigate("/enterprise", { state: data.payload });
   };
 

@@ -1,7 +1,12 @@
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
-import { fetchDefinition, deleteComp } from "../../redux/definationSlice";
+import {
+  fetchDefinition,
+  deleteComp,
+  compDetails,
+  clearCompDetails,
+} from "../../redux/definationSlice";
 import custMessage from "../../utils/toast";
 import CompanyCard from "./component/CompanyCard";
 import Banner from "./component/Banner";
@@ -17,6 +22,9 @@ const Home = () => {
     if (user) {
       dispatch(fetchDefinition());
     }
+    return () => {
+      dispatch(clearCompDetails());
+    };
   }, [dispatch, user]);
 
   const deleteCompById = useCallback(
@@ -26,6 +34,18 @@ const Home = () => {
         .then(() => {
           custMessage.success(`${cname} deleted successfully`);
         })
+        .catch((err) => {
+          custMessage.error(err.message || "Failed to delete Company Code");
+        });
+    },
+    [dispatch],
+  );
+
+  const editCompById = useCallback(
+    (id, type) => {
+      dispatch(compDetails({ Id: id, type }))
+        .unwrap()
+        .then(() => {})
         .catch((err) => {
           custMessage.error(err.message || "Failed to delete Company Code");
         });
@@ -47,6 +67,7 @@ const Home = () => {
             key={item.id}
             item={item}
             deleteCompById={deleteCompById}
+            editCompById={editCompById}
           />
         );
       });

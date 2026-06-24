@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { compDetails } from "../../../redux/definationSlice";
 import { useNavigate } from "react-router";
-const CompanyCard = ({ item, deleteCompById }) => {
+const CompanyCard = ({ item, deleteCompById, editCompById }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { company_code, id } = item;
 
   const handleClick = async (id) => {
-    const data = await dispatch(compDetails(id));
+    console.log("🚀 ~ handleClick ~ id:", id);
+    const data = await dispatch(compDetails({ Id: id, type: "view" }));
     navigate("/Comp-details", { state: data });
   };
 
@@ -17,7 +18,8 @@ const CompanyCard = ({ item, deleteCompById }) => {
   };
   const handleEdit = async (e) => {
     e.stopPropagation();
-    getLoanDetails(id, "edit");
+    editCompById(id, "edit");
+    navigate("/definition");
   };
   return (
     <div className={`card`} onClick={() => handleClick(id)}>

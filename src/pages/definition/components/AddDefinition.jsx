@@ -3,59 +3,152 @@ import { useDispatch, useSelector } from "react-redux";
 import Input from "../../../components/Input";
 import useDefinitionForm from "../../../hooks/useDefinitionForm";
 import { Link } from "react-router";
-import { createDefinations } from "../../../redux/definationSlice";
+import {
+  createDefinations,
+  clearCompDetails,
+  updateDefinition,
+} from "../../../redux/definationSlice";
 import custMessage from "../../../utils/toast";
 import { useNavigate } from "react-router";
 
 const AddLoan = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { formData, setFormData, requiredFields } = useDefinitionForm();
   const {
     user: { id, email },
   } = useSelector((s) => s.auth);
 
-  const navigate = useNavigate();
+  const { compDetails } = useSelector((s) => s.definition);
 
-  const { formData, setFormData, requiredFields } = useDefinitionForm();
+  useEffect(() => {
+    if (compDetails) {
+      const {
+        company,
+        company_code,
+        sales_organization_dom,
+        sales_organization_exp,
+        distribution_channel_dom,
+        distribution_channel_exp,
+        division,
+        sales_office,
+        sales_group,
+        plant,
+        storage_loc_p1,
+        storage_loc_p2,
+        shipping_point_p1,
+        shipping_point_p2,
+      } = compDetails;
+      setFormData({
+        company: company || [{ name: "", code: "" }],
+        companyCode: company_code || [{ name: "", code: "" }],
+        salesOrganizationDom: sales_organization_dom || [
+          { name: "", code: "" },
+        ],
+        salesOrganizationExp: sales_organization_exp || [
+          { name: "", code: "" },
+        ],
+        distributionChannelDom: distribution_channel_dom || [
+          { name: "", code: "" },
+        ],
+        distributionChannelExp: distribution_channel_exp || [
+          { name: "", code: "" },
+        ],
+        division: division || [{ name: "", code: "" }],
+        salesOffice: sales_office || [{ name: "", code: "" }],
+        salesGroup: sales_group || [{ name: "", code: "" }],
+        plant: plant || [{ name: "", code: "" }],
+        storageLocationP1: storage_loc_p1 || [{ name: "", code: "" }],
+        storageLocationP2: storage_loc_p2 || [{ name: "", code: "" }],
+        shippingPointP1: shipping_point_p1 || [{ name: "", code: "" }],
+        shippingPointP2: shipping_point_p2 || [{ name: "", code: "" }],
+      });
+    }
+  }, [compDetails]);
 
   const handleSubmit = async () => {
-    try {
-      await dispatch(
-        createDefinations({
-          definition: {
-            user_id: id,
-            user_email: email,
+    // e.preventDefault();
+    if (compDetails) {
+      try {
+        await dispatch(
+          updateDefinition({
+            Id: compDetails.id,
+            definition: {
+              user_id: id,
+              user_email: email,
 
-            company: formData.company,
+              company: formData.company,
 
-            company_code: formData.companyCode,
+              company_code: formData.companyCode,
 
-            sales_organization_dom: formData.salesOrganizationDom,
-            sales_organization_exp: formData.salesOrganizationExp,
+              sales_organization_dom: formData.salesOrganizationDom,
+              sales_organization_exp: formData.salesOrganizationExp,
 
-            distribution_channel_dom: formData.distributionChannelDom,
-            distribution_channel_exp: formData.distributionChannelExp,
+              distribution_channel_dom: formData.distributionChannelDom,
+              distribution_channel_exp: formData.distributionChannelExp,
 
-            division: formData.division,
+              division: formData.division,
 
-            sales_office: formData.salesOffice,
+              sales_office: formData.salesOffice,
 
-            sales_group: formData.salesGroup,
+              sales_group: formData.salesGroup,
 
-            plant: formData.plant,
+              plant: formData.plant,
 
-            storage_loc_p1: formData.storageLocationP1,
-            storage_loc_p2: formData.storageLocationP2,
+              storage_loc_p1: formData.storageLocationP1,
+              storage_loc_p2: formData.storageLocationP2,
 
-            shipping_point_p1: formData.shippingPointP1,
-            shipping_point_p2: formData.shippingPointP2,
-          },
-        }),
-      ).unwrap();
+              shipping_point_p1: formData.shippingPointP1,
+              shipping_point_p2: formData.shippingPointP2,
+            },
+          }),
+        ).unwrap();
 
-      custMessage.success("Company added successfully");
-      navigate("/");
-    } catch (error) {
-      custMessage.error(error.message || "Failed to add Company");
+        custMessage.success("Company added successfully");
+        navigate("/");
+      } catch (error) {
+        custMessage.error(error.message || "Failed to add Company");
+      }
+    } else {
+      try {
+        await dispatch(
+          createDefinations({
+            definition: {
+              user_id: id,
+              user_email: email,
+
+              company: formData.company,
+
+              company_code: formData.companyCode,
+
+              sales_organization_dom: formData.salesOrganizationDom,
+              sales_organization_exp: formData.salesOrganizationExp,
+
+              distribution_channel_dom: formData.distributionChannelDom,
+              distribution_channel_exp: formData.distributionChannelExp,
+
+              division: formData.division,
+
+              sales_office: formData.salesOffice,
+
+              sales_group: formData.salesGroup,
+
+              plant: formData.plant,
+
+              storage_loc_p1: formData.storageLocationP1,
+              storage_loc_p2: formData.storageLocationP2,
+
+              shipping_point_p1: formData.shippingPointP1,
+              shipping_point_p2: formData.shippingPointP2,
+            },
+          }),
+        ).unwrap();
+
+        custMessage.success("Company added successfully");
+        navigate("/");
+      } catch (error) {
+        custMessage.error(error.message || "Failed to add Company");
+      }
     }
   };
 
@@ -97,7 +190,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.companyCode.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -127,7 +220,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.salesOrganizationDom.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code (Domestic)"
@@ -163,7 +256,7 @@ const AddLoan = () => {
           </div>
           <div>
             {formData.salesOrganizationExp.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code (Export)"
@@ -203,7 +296,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.distributionChannelDom.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code (Domestic)"
@@ -238,6 +331,7 @@ const AddLoan = () => {
             ))}
             <div className="btn-wrapper">
               <button
+                type="button"
                 className="btn btn-primary-hallow"
                 onClick={() => addRow("distributionChannelDom")}
               >
@@ -247,7 +341,7 @@ const AddLoan = () => {
           </div>
           <div>
             {formData.distributionChannelExp.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code (Export)"
@@ -287,7 +381,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.division.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -325,7 +419,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.salesOffice.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -355,7 +449,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.salesGroup.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -385,7 +479,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.plant.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -415,7 +509,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.storageLocationP1.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -459,7 +553,7 @@ const AddLoan = () => {
           </div>
           <div>
             {formData.storageLocationP2.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -507,7 +601,7 @@ const AddLoan = () => {
         <div className="input-outter">
           <div>
             {formData.shippingPointP1.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"
@@ -551,7 +645,7 @@ const AddLoan = () => {
           </div>
           <div>
             {formData.shippingPointP2.map((item, index) => (
-              <div className="combination">
+              <div className="combination" key={index}>
                 <Input
                   type="text"
                   label="Code"

@@ -6,20 +6,6 @@ import {
 import supabase from "../services/supabase";
 import { signOut } from "./authSlice";
 
-// ✅ Create Defination
-// export const createDefination = createAsyncThunk(
-//   "definition/createDefination",
-//   async ({ definition }, { rejectWithValue }) => {
-//     const { error, data } = await supabase
-//       .from("definition")
-//       .insert([definition])
-//       .select()
-//       .single();
-//     if (error) return rejectWithValue(error.message);
-//     return { ...data };
-//   },
-// );
-
 // ✅ Fetch Loans
 export const fetchDefinition = createAsyncThunk(
   "definition/fetchDefinition",
@@ -27,7 +13,10 @@ export const fetchDefinition = createAsyncThunk(
     const {
       auth: { user },
     } = getState();
-    if (!user) return [];
+    // if (!user) return [];
+    if (!user) {
+      return rejectWithValue("User not logged in");
+    }
     const { data, error } = await supabase
       .from("enterprisestructure")
       .select("*")
@@ -52,14 +41,14 @@ export const deleteComp = createAsyncThunk(
 
 export const compDetails = createAsyncThunk(
   "definition/compDetails",
-  async (Id, { rejectWithValue }) => {
+  async ({ Id, type }, { rejectWithValue }) => {
     const { error, data } = await supabase
       .from("enterprisestructure")
       .select("*")
       .eq("id", Id)
       .single();
     if (error) return rejectWithValue(error.message);
-    return data;
+    return { ...data, typemode: type };
   },
 );
 
@@ -79,6 +68,22 @@ export const createDefinations = createAsyncThunk(
   },
 );
 
+export const updateDefinition = createAsyncThunk(
+  "definition/updateDefinition",
+  async ({ Id, definition }, { rejectWithValue }) => {
+    const { data, error } = await supabase
+      .from("enterprisestructure")
+      .update(definition)
+      .eq("id", Id)
+      .select()
+      .single();
+
+    if (error) return rejectWithValue(error.message);
+
+    return data;
+  },
+);
+
 const initialState = {
   items: [],
   compDetails: null,
@@ -86,8 +91,6 @@ const initialState = {
   loadComp: "idle",
   fetchStatus: "idle",
   error: null,
-  currentSchedule: null,
-  emiSummary: null,
 };
 
 const defineSlice = createSlice({
@@ -113,9 +116,35 @@ const defineSlice = createSlice({
       })
       .addCase(createDefinations.fulfilled, (s, a) => {
         s.status = "succeeded";
+
+        if (!Array.isArray(s.items)) {
+          s.items = [];
+        }
+
         s.items.unshift(a.payload);
       })
       .addCase(createDefinations.rejected, (s, a) => {
+        s.status = "failed";
+        s.error = a.payload;
+      })
+
+      .addCase(updateDefinition.pending, (s) => {
+        s.status = "loading";
+      })
+      .addCase(updateDefinition.fulfilled, (s, a) => {
+        s.status = "succeeded";
+
+        const index = s.items.findIndex((item) => item.id === a.payload.id);
+
+        if (index !== -1) {
+          s.items[index] = a.payload;
+        }
+
+        if (s.compDetails?.id === a.payload.id) {
+          s.compDetails = a.payload;
+        }
+      })
+      .addCase(updateDefinition.rejected, (s, a) => {
         s.status = "failed";
         s.error = a.payload;
       })
@@ -148,9 +177,8 @@ const defineSlice = createSlice({
       })
 
       // Loan Details
-      // Delete
       .addCase(compDetails.pending, (s) => {
-        s.compDetails = [];
+        s.compDetails = null;
         s.loadComp = "loading";
       })
       .addCase(compDetails.fulfilled, (s, a) => {
@@ -168,13 +196,17 @@ const defineSlice = createSlice({
 });
 
 //// ✅ Selectors
-const selectLoansState = (state) => state.loans;
+const selectDefinitionState = (state) => state.definition;
 
-export const selectScheduleState = createSelector(
-  [selectLoansState],
-  (state) => state.currentSchedule,
+export const selectCompDetails = createSelector(
+  [selectDefinitionState],
+  (state) => state.compDetails,
 );
 
-export const { computeScheduleFor, removeSummery, restStatus } =
-  defineSlice.actions;
+export const {
+  computeScheduleFor,
+  removeSummery,
+  restStatus,
+  clearCompDetails,
+} = defineSlice.actions;
 export default defineSlice.reducer;

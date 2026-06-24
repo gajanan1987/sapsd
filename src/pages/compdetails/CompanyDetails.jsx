@@ -6,6 +6,7 @@ import DefinitionTable from "./components/DefinitionTable";
 
 const CompanyDetails = () => {
   const location = useLocation();
+  console.log("🚀 ~ CompanyDetails ~ location:", location);
   const navigate = useNavigate();
 
   const {

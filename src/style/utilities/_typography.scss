@@ -1,7 +1,7 @@
 h1 {
 	font-size: 38px;
-	@include Font-Medium;
 	margin-bottom: 16px;
+	font-weight: 900;
 
 	@include mq("d-1200", "max") {
 		font-size: 32px;
