@@ -18,20 +18,6 @@ const AddLoan = () => {
   const { formData, setFormData, requiredFields } = useDefinitionForm();
 
   const handleSubmit = async () => {
-    // if (isInvalid) return;
-    // console.log(requiredFields.filter((field) => !formData[field]?.trim()));
-    // try {
-    //   await dispatch(
-    //     createDefination({
-    //       definition: data,
-    //     }),
-    //   ).unwrap();
-    //   custMessage.success("Loan added successfully");
-    //   navigate("/");
-    // } catch (error) {
-    //   custMessage.error(error.message || "Failed to add loan");
-    // }
-
     try {
       await dispatch(
         createDefinations({
@@ -66,10 +52,10 @@ const AddLoan = () => {
         }),
       ).unwrap();
 
-      custMessage.success("Loan added successfully");
+      custMessage.success("Company added successfully");
       navigate("/");
     } catch (error) {
-      custMessage.error(error.message || "Failed to add loan");
+      custMessage.error(error.message || "Failed to add Company");
     }
   };
 

@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { compDetails } from "../../../redux/definationSlice";
 import { useNavigate } from "react-router";
 const EnterpriseCard = ({ item, status }) => {
-  console.log("🚀 ~ EnterpriseCard ~ status:", status);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = item?.[0] || {};
