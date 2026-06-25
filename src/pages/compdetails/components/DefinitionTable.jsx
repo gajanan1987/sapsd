@@ -3,23 +3,27 @@ const DefinitionTable = ({ name, data = [], cname }) => {
 
   if (filteredData.length === 0) return null;
   return (
-    <table className={`table-reponsive common-table definition-table ${cname}`}>
-      <thead>
-        <tr>
-          <th>{name}</th>
-          <th className="code">Name</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {filteredData.map((item, index) => (
-          <tr className="tr-year" key={`${item.name}-${index}`}>
-            <td>{item.code || "-"}</td>
-            <td>{item.name || "-"}</td>
+    <div>
+      <table
+        className={`table-reponsive common-table definition-table ${cname}`}
+      >
+        <thead>
+          <tr>
+            <th>{name}</th>
+            <th className="code">Name</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          {filteredData.map((item, index) => (
+            <tr className="tr-year" key={`${item.name}-${index}`}>
+              <td>{item.code || "-"}</td>
+              <td>{item.name || "-"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

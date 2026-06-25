@@ -155,7 +155,7 @@ th {
 		vertical-align: middle;
 
 		@include mq("t-768", "max") {
-			font-size: 12px;
+			font-size: 15px;
 		}
 
 		// &.principal {
@@ -290,15 +290,16 @@ th {
 		color: var(--color-black);
 		text-align: center;
 		vertical-align: middle;
+		white-space: nowrap;
 	}
 
 
 	.tr-year {
-		&.Done {
-			td {
-				color: green;
-			}
-		}
+		// &.Done {
+		// 	td {
+		// 		color: green;
+		// 	}
+		// }
 
 		td {
 			@include Font-Bold;
@@ -408,11 +409,19 @@ th {
 
 //assignment-table
 .assignment-table-wrapper {
+	@include mq("t-768", "max") {
+		margin-bottom: 16px;
+	}
+
 	h2 {
 		text-transform: uppercase;
 		margin-bottom: 10px;
 		font-weight: 800;
+
 		// color: var(--color-link);
+		@include mq("t-768", "max") {
+			text-transform: initial;
+		}
 	}
 }
 
@@ -421,8 +430,11 @@ th {
 	thead {
 		tr {
 			th {
-				font-size: 18px;
-				font-weight: 900;
+
+
+				@include mq("t-768", "min") {
+					font-size: 18px;
+				}
 
 				x &.ccode {
 					background-color: #434343;
@@ -477,7 +489,7 @@ th {
 				}
 
 				&:nth-child(odd) {
-					font-size: 15px;
+					font-size: 16px;
 					font-weight: 600;
 				}
 			}
@@ -514,6 +526,10 @@ th {
 			td {
 				&:nth-child(1) {
 					font-size: 16px;
+				}
+
+				@include mq("t-768", "max") {
+					min-width: 180px;
 				}
 			}
 		}

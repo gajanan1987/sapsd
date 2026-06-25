@@ -28,7 +28,7 @@
 .loan-details-header {
  display: flex;
  flex-direction: row;
- margin-bottom: 24px;
+ // margin-bottom: 24px;
  column-gap: 24px;
 
  @include mq("t-768", "max") {
@@ -43,7 +43,13 @@
   flex: 1;
 
   @include mq("t-768", "max") {
-   margin-bottom: 16px;
+   // margin-bottom: 16px;
+  }
+
+  >div {
+   @include mq("t-768", "max") {
+    margin-bottom: 16px;
+   }
   }
 
   p {
