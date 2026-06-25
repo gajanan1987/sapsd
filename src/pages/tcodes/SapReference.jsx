@@ -12,7 +12,7 @@ const SapReference = () => {
   );
   return (
     <div className="sap-reference-page">
-      <h1>SAP SD Reference Guide</h1>
+      <h1>SAP SD IMP TCodes & Tables</h1>
 
       {referenceData.map((section, index) => (
         <SapReferenceTable
