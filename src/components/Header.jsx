@@ -45,6 +45,11 @@ const Header = () => {
         {user && (
           <>
             <li>
+              <NavLink to="/sap-tcodes" onClick={() => setNav(false)}>
+                IMP T-Codes
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/enterprise-list" onClick={() => setNav(false)}>
                 Enterprise Structure
               </NavLink>

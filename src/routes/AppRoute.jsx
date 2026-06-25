@@ -6,6 +6,7 @@ const Home = lazy(() => import("../pages/home/Home"));
 const AuthPage = lazy(() => import("../pages/auth/AuthPage"));
 const DefinitionPage = lazy(() => import("../pages/definition/DefineComapany"));
 const AccountPage = lazy(() => import("../pages/account/Account"));
+const Tcodes = lazy(() => import("../pages/tcodes/SapReference"));
 const EnterpriseStructure = lazy(
   () => import("../pages/enterprise/EnterpriseStructure"),
 );
@@ -32,6 +33,7 @@ const AppRoutes = () => {
           <Route path="/definition" element={<DefinitionPage />} />
           <Route path="/Comp-details" element={<CompDetailsPage />} />
           <Route path="/enterprise" element={<EnterpriseStructure />} />
+          <Route path="/sap-tcodes" element={<Tcodes />} />
           <Route
             path="/enterprise-list"
             element={<EnterpriseStructureList />}

@@ -290,7 +290,10 @@ th {
 		color: var(--color-black);
 		text-align: center;
 		vertical-align: middle;
-		white-space: nowrap;
+
+		@include mq("t-768", "max") {
+			white-space: nowrap;
+		}
 	}
 
 
@@ -538,4 +541,204 @@ th {
 
 .p-relative {
 	position: relative;
+}
+
+//assignment-table
+.sap-table-wrapper {
+	@include mq("t-768", "max") {
+		margin-bottom: 16px;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		font-weight: 800;
+
+		@include mq("t-768", "max") {
+			text-transform: initial;
+		}
+	}
+
+	td,
+	th {
+		font-weight: 500;
+	}
+
+	thead {
+		tr {
+			th {
+				color: #fff;
+				border: 1px solid;
+			}
+		}
+	}
+
+	&.enterpriseStructure {
+		table {
+			border-color: #024bbf;
+
+			thead {
+				tr {
+					th {
+						background-color: #024bbf;
+						color: #fff;
+						border: 1px solid #5190f5;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #5190f5;
+					}
+				}
+			}
+		}
+	}
+
+	&.businessPartner {
+		table {
+			border-color: #c64e06;
+
+			thead {
+				tr {
+					th {
+						background-color: #fb5e00;
+						color: #fff;
+						border: 1px solid #f6a778;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #f6a778;
+					}
+				}
+			}
+		}
+	}
+
+	&.materialMaster {
+		table {
+			border-color: #063c91;
+
+			thead {
+				tr {
+					th {
+						background-color: #034bba;
+						color: #fff;
+						border: 1px solid #5190f5;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #5190f5;
+					}
+				}
+			}
+		}
+	}
+
+	&.pricing {
+		table {
+			border-color: #c86c02;
+
+			thead {
+				tr {
+					th {
+						background-color: #fc8700;
+						color: #fff;
+						border: 1px solid #edb779;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #edb779;
+					}
+				}
+			}
+		}
+	}
+
+	&.salesOrderProcessing {
+		table {
+			border-color: #036064;
+
+			thead {
+				tr {
+					th {
+						background-color: #02858b;
+						color: #fff;
+						border: 1px solid #04b3bb;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #04b3bb;
+					}
+				}
+			}
+		}
+	}
+
+	&.deliveryProcessing {
+		table {
+			border-color: #631c77;
+
+			thead {
+				tr {
+					th {
+						background-color: #802a98;
+						color: #fff;
+						border: 1px solid #be68d5;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #be68d5;
+					}
+				}
+			}
+		}
+	}
+
+	&.invoiceProcessing {
+		table {
+			border-color: #c02264;
+
+			thead {
+				tr {
+					th {
+						background-color: #e8337d;
+						color: #fff;
+						border: 1px solid #f592ba;
+					}
+				}
+			}
+
+			tbody {
+				tr {
+					td {
+						border-color: #f592ba;
+					}
+				}
+			}
+		}
+	}
+
 }
