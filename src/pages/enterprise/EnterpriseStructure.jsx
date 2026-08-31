@@ -9,6 +9,7 @@ const EnterpriseStructure = () => {
   const location = useLocation();
 
   const compData = location.state;
+  console.log("🚀 ~ EnterpriseStructure ~ compData:", compData);
   const result = generateEnterpriseAssignments(compData);
 
   return (
@@ -132,14 +133,72 @@ const EnterpriseStructure = () => {
       <AssignmentTable
         title="9. Shipping Point - Plant"
         columns={[
-          { key: "plantCode", label: "SPoint", thclass: "spoint" },
+          { key: "plantCode", label: "Plant", thclass: "plant" },
           { key: "plantName", label: "Name" },
 
-          { key: "shippingPointCode", label: "Plant", thclass: "plant" },
+          { key: "shippingPointCode", label: "SPoint", thclass: "spoint" },
           { key: "shippingPointName", label: "Name" },
         ]}
         data={result.shippingPointToPlant}
       />
+
+      <AssignmentTable
+        title="10. Pricing Procedure Determination"
+        columns={[
+          { key: "salesOrgCode", label: "SOrg." },
+          { key: "dcCode", label: "DChl." },
+          { key: "divisionCode", label: "Dv" },
+          { key: "customerPricingProcedure", label: "CuPP" },
+          { key: "pricingProcedureCode", label: "PriPr." },
+          { key: "pricingProcedureName", label: "Pricing Procedure" },
+          { key: "conditionType", label: "CType" },
+          { key: "conditionTypeName", label: "CType Name" },
+        ]}
+        data={result.pricingProcedureDetermination}
+      />
+
+      <AssignmentTable
+        title="11. Shipping Point Determination"
+        columns={[
+          {
+            key: "shippingCondition",
+            label: "ShCond.",
+            thclass: "shcond",
+          },
+          {
+            key: "loadingGroup",
+            label: "LGrp",
+            thclass: "lgrp",
+          },
+          {
+            key: "plantCode",
+            label: "Plant",
+            thclass: "plant",
+          },
+          {
+            key: "shippingPointCode",
+            label: "SPoint",
+            thclass: "spoint",
+          },
+          {
+            key: "shippingPointName",
+            label: "Shipping Point",
+          },
+        ]}
+        data={result.shippingPointDetermination}
+      />
+
+      {/* <AssignmentTable
+        title="Partner Determination Procedure"
+        columns={[
+          { key: "procedure", label: "Procedure" },
+          { key: "partnerFunction", label: "PFn" },
+          { key: "partnerName", label: "Partner Function" },
+          { key: "mandatory", label: "Mandatory" },
+          { key: "unique", label: "Unique" },
+        ]}
+        data={result.partnerDetermination}
+      /> */}
     </div>
   );
 };

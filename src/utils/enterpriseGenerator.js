@@ -205,6 +205,83 @@ export const generateEnterpriseAssignments = (enterprise) => {
     })),
   ];
 
+  const pricingProcedureDetermination = salesArea.map((area) => ({
+    salesOrgCode: area.salesOrgCode,
+
+    dcCode: area.dcCode,
+
+    divisionCode: area.divisionCode,
+
+    customerPricingProcedure: "A",
+
+    pricingProcedureCode: "1",
+
+    pricingProcedureName: "PP Name",
+
+    conditionType: "PR00",
+
+    conditionTypeName: "Price",
+  }));
+
+  // =====================================================
+  // 11. SHIPPING POINT DETERMINATION
+  // OVL2
+  // =====================================================
+
+  const shippingPointDetermination = [
+    ...shipping_point_p1.map((sp) => ({
+      shippingCondition: "01", // Standard
+      loadingGroup: "0001", // Standard Loading Group
+
+      plantCode: plant?.[0]?.code || "",
+
+      shippingPointCode: sp.code,
+      shippingPointName: sp.name,
+    })),
+
+    ...shipping_point_p2.map((sp) => ({
+      shippingCondition: "01",
+
+      loadingGroup: "0001",
+
+      plantCode: plant?.[1]?.code || "",
+
+      shippingPointCode: sp.code,
+      shippingPointName: sp.name,
+    })),
+  ];
+
+  const partnerDetermination = [
+    {
+      procedure: "ZPAR",
+      partnerFunction: "SP",
+      partnerName: "Sold-to Party",
+      mandatory: "✔",
+      unique: "✔",
+    },
+    {
+      procedure: "ZPAR",
+      partnerFunction: "SH",
+      partnerName: "Ship-to Party",
+      mandatory: "✔",
+      unique: "✔",
+    },
+    {
+      procedure: "ZPAR",
+      partnerFunction: "BP",
+      partnerName: "Bill-to Party",
+      mandatory: "✔",
+      unique: "✔",
+    },
+    {
+      procedure: "ZPAR",
+      partnerFunction: "PY",
+      partnerName: "Payer",
+      mandatory: "✔",
+      unique: "✔",
+    },
+  ];
+
   return {
     salesOrgToCompanyCode,
     distributionChannelToSalesOrg,
@@ -215,5 +292,9 @@ export const generateEnterpriseAssignments = (enterprise) => {
     plantToCompanyCode,
     salesOrgDcPlant,
     shippingPointToPlant,
+
+    pricingProcedureDetermination,
+    shippingPointDetermination,
+    partnerDetermination,
   };
 };

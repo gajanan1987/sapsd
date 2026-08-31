@@ -7,6 +7,7 @@ const AuthPage = lazy(() => import("../pages/auth/AuthPage"));
 const DefinitionPage = lazy(() => import("../pages/definition/DefineComapany"));
 const AccountPage = lazy(() => import("../pages/account/Account"));
 const Tcodes = lazy(() => import("../pages/tcodes/SapReference"));
+const Lecture = lazy(() => import("../pages/lecture/Lecture"));
 const EnterpriseStructure = lazy(
   () => import("../pages/enterprise/EnterpriseStructure"),
 );
@@ -27,6 +28,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<AuthPage />} />
+        <Route path="/lecture" element={<Lecture />} />
         <Route element={<ProtectedRotes />}>
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/account" element={<AccountPage />} />
