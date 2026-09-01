@@ -751,7 +751,7 @@ th {
 //
 .lecture-common {
 	.container {
-		max-width: 1140px !important;
+		max-width: 1000px !important;
 	}
 
 	table {
@@ -784,9 +784,9 @@ th {
 	}
 
 	p {
-		margin: 8px 0 0 0 !important;
-		opacity: 0.9 !important;
-		font-size: 0.9em !important;
+		margin: revert !important;
+		// opacity: 0.9 !important;
+		// font-size: 0.9em !important;
 	}
 
 	h2 {
@@ -796,6 +796,10 @@ th {
 		display: flex;
 		align-items: center;
 		gap: 10px !important;
+	}
+
+	h3 {
+		margin: revert !important;
 	}
 
 	ul {
