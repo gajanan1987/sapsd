@@ -95,7 +95,7 @@ const Pricing1 = () => {
             capture each pricing scenario.
           </div>
 
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Table</th>
               <th>Field Combination</th>
@@ -158,7 +158,7 @@ const Pricing1 = () => {
             <em>lower/most targeted</em> price is the most specific.
           </p>
 
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Priority</th>
               <th>Combination</th>
@@ -283,7 +283,7 @@ const Pricing1 = () => {
             </span>
           </div>
 
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Customer</th>
               <th>Category</th>
@@ -373,7 +373,7 @@ const Pricing1 = () => {
             <strong>valid condition record</strong>, it stops searching
             immediately and uses that price. ⚡
           </div>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Customer</th>
               <th>Final Price</th>
@@ -443,7 +443,7 @@ const Pricing1 = () => {
             <strong>all</strong> valid prices found, then{" "}
             <strong>activates the last one</strong> and deactivates the rest.
           </div>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Customer</th>
               <th>All Prices Found (in order)</th>
@@ -585,7 +585,7 @@ const Pricing1 = () => {
             <span className="badge">❓</span> Important Interview Questions &
             Answers
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Question</th>
               <th>Answer</th>
@@ -655,7 +655,7 @@ const Pricing1 = () => {
             <span className="badge">🔢</span> Important Transaction Codes &
             Purpose
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>T-Code</th>
               <th>Purpose</th>
@@ -687,7 +687,7 @@ const Pricing1 = () => {
             <span className="badge">⚙️</span> Important Configuration Topics &
             Values
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Topic</th>
               <th>Value / Detail</th>

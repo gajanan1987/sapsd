@@ -748,10 +748,11 @@ th {
 
 }
 
-//
+////////////
 .lecture-common {
 	.container {
 		max-width: 1000px !important;
+		padding: 0;
 	}
 
 	table {
@@ -764,7 +765,7 @@ th {
 		font-size: 15px;
 		line-height: initial;
 		vertical-align: middle;
-		min-width: revert !important;
+		// min-width: revert !important;
 	}
 
 	th {
@@ -775,7 +776,7 @@ th {
 		font-size: 15px;
 		line-height: initial;
 		vertical-align: middle;
-		min-width: revert !important;
+		// min-width: revert !important;
 		font-weight: bold;
 		text-transform: revert;
 		@include Font-Bold;
@@ -789,6 +790,7 @@ th {
 
 	p {
 		margin: revert !important;
+		line-height: 1.3;
 		// opacity: 0.9 !important;
 		// font-size: 0.9em !important;
 	}
@@ -810,11 +812,30 @@ th {
 		padding: revert !important;
 		margin: revert !important;
 		list-style: revert !important;
+
+		@media (max-width: 767px) {
+			padding-left: 20px !important;
+		}
+
+		li {
+			@media (max-width: 767px) {
+				padding-bottom: 6px !important;
+			}
+		}
 	}
 
 	code,
 	.code,
 	.tcode {
 		font-size: 0.85em !important;
+	}
+
+	.card {
+		padding: 22px 24px !important;
+
+		@media (max-width: 767px) {
+			margin-top: 20px !important;
+			padding: 20px 20px !important;
+		}
 	}
 }
