@@ -51,7 +51,7 @@ const Pricing2 = () => {
           </p>
 
           <h3>Standard Condition Types</h3>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Category</th>
               <th>Condition Type</th>
@@ -152,7 +152,7 @@ const Pricing2 = () => {
           </p>
 
           <h3>Structure — Step by Step</h3>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Step</th>
               <th>Condition Type(s)</th>
@@ -333,7 +333,7 @@ const Pricing2 = () => {
           </div>
 
           <h3>Technical View: Key Field & Footer</h3>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Setting</th>
               <th>If Checked</th>
@@ -524,7 +524,7 @@ const Pricing2 = () => {
           <h2>
             <span className="badge">📋</span> T-Code Quick Reference
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Object</th>
               <th>T-Code</th>
@@ -588,7 +588,7 @@ const Pricing2 = () => {
             <span className="badge">❓</span> Important Interview Questions &
             Answers
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Question</th>
               <th>Answer</th>
@@ -680,7 +680,7 @@ const Pricing2 = () => {
             <span className="badge">🔢</span> Important Transaction Codes &
             Purpose
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>T-Code</th>
               <th>Purpose</th>
@@ -760,7 +760,7 @@ const Pricing2 = () => {
             <span className="badge">⚙️</span> Important Configuration Topics &
             Values
           </h2>
-          <table>
+          <table className="table-reponsive">
             <tr>
               <th>Topic</th>
               <th>Value / Detail</th>
