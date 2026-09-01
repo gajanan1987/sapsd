@@ -16,10 +16,10 @@
 }
 
 body {
- font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+ // font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
  background: linear-gradient(135deg, #eef2ff 0%, #f7f8fc 40%, #fef6ec 100%);
- margin: 0;
- padding: 0 0 60px 0;
+ // margin: 0;
+ // padding: 0 0 60px 0;
  color: #1f2430;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .container {
- max-width: 950px;
+ max-width: 1040px;
  margin: 0 auto;
  padding: 0 20px;
 }
@@ -285,4 +285,19 @@ code {
  span {
   font-size: 0.85em;
  }
+}
+
+.note-text {
+ font-size: 0.9em;
+ color: #6b7280;
+}
+
+.note-text-center {
+ font-size: 0.9em;
+ color: #6b7280;
+ text-align: center;
+}
+
+.legend-top {
+ margin-top: 8px;
 }

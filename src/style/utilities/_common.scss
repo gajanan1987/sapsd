@@ -747,3 +747,24 @@ th {
 	}
 
 }
+
+//
+.lecture-common {
+	td {
+		padding: 9px 12px;
+		border-bottom: 1px solid #e5e7eb;
+		font-size: 15px;
+		line-height: initial;
+		vertical-align: initial;
+	}
+
+	th {
+		background: var(--navy);
+		color: white;
+		padding: 10px 12px;
+		text-align: left;
+		font-size: 15px;
+		line-height: initial;
+		vertical-align: initial;
+	}
+}
