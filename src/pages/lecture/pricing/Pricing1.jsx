@@ -763,3 +763,10 @@ const Pricing1 = () => {
 };
 
 export default Pricing1;
+
+// import "../../../style/Lect/pricing2.scss";
+// const Pricing2 = () => {
+//   return <div className="lecture-common"></div>;
+// };
+
+// export default Pricing2;
