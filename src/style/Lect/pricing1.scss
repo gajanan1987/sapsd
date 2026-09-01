@@ -45,7 +45,7 @@ body {
 }
 
 .container {
- max-width: 1040px;
+ max-width: 1140px;
  margin: 0 auto;
  padding: 0 20px;
 }
@@ -252,7 +252,8 @@ tr {
 }
 
 code {
- background: #1e293b;
+ // background: #1e293b;
+ background: var(--navy);
  color: #93c5fd;
  padding: 2px 8px;
  border-radius: 6px;

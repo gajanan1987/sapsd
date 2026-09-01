@@ -750,12 +750,21 @@ th {
 
 //
 .lecture-common {
+	.container {
+		max-width: 1140px !important;
+	}
+
+	table {
+		table-layout: revert !important;
+	}
+
 	td {
 		padding: 9px 12px;
 		border-bottom: 1px solid #e5e7eb;
 		font-size: 15px;
 		line-height: initial;
 		vertical-align: middle;
+		min-width: revert !important;
 	}
 
 	th {
@@ -766,5 +775,32 @@ th {
 		font-size: 15px;
 		line-height: initial;
 		vertical-align: middle;
+		min-width: revert !important;
+	}
+
+	h1 {
+		font-size: 2.1em !important;
+		letter-spacing: 0.5px !important;
+	}
+
+	p {
+		margin: 8px 0 0 0 !important;
+		opacity: 0.9 !important;
+		font-size: 0.9em !important;
+	}
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: revert !important;
+		font-size: 1.4em !important;
+		display: flex;
+		align-items: center;
+		gap: 10px !important;
+	}
+
+	ul {
+		padding: revert !important;
+		margin: revert !important;
+		list-style: revert !important;
 	}
 }
