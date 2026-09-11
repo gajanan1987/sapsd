@@ -9,7 +9,6 @@ const EnterpriseStructure = () => {
   const location = useLocation();
 
   const compData = location.state;
-  console.log("🚀 ~ EnterpriseStructure ~ compData:", compData);
   const result = generateEnterpriseAssignments(compData);
 
   return (

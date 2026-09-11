@@ -55,6 +55,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/lectures" onClick={() => setNav(false)}>
+                Leactures
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/account" onClick={() => setNav(false)}>
                 Account
               </NavLink>

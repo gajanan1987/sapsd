@@ -7,7 +7,6 @@ const CompanyCard = ({ item, deleteCompById, editCompById }) => {
   const { company_code, id } = item;
 
   const handleClick = async (id) => {
-    console.log("🚀 ~ handleClick ~ id:", id);
     const data = await dispatch(compDetails({ Id: id, type: "view" }));
     navigate("/Comp-details", { state: data });
   };
