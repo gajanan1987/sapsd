@@ -1,36 +1,39 @@
 import { useParams } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import "../../style/Lect/CommonClass.scss";
 
-import Pricing1 from "./pricing/Pricing1";
-import Pricing2 from "./pricing/Pricing2";
-import Pricing3 from "./pricing/Pricing3";
-import Pricing4 from "./pricing/Pricing4";
-import Pricing5 from "./pricing/Pricing5";
+const lectureComponents = import.meta.glob("./**/*.jsx");
 
 const ClassPage = () => {
   const { category, lectureNo } = useParams();
 
-  console.log("Lecture params:", {
-    category,
-    lectureNo,
-  });
+  let fileName = "";
 
-  const lectures = {
-    pricing: {
-      "lect-65": Pricing1,
-      "lect-66": Pricing2,
-      "lect-67": Pricing3,
-      "lect-68": Pricing4,
-      "lect-69": Pricing5,
-    },
-  };
+  if (category === "pricing") {
+    const number = lectureNo?.replace("lect-", "");
 
-  const LectureComponent = lectures[category]?.[lectureNo];
+    fileName = `./pricing/Pricing${number}.jsx`;
+  }
 
-  if (!LectureComponent) {
+  if (category === "enterprise") {
+    const number = lectureNo?.replace("lect-", "");
+
+    fileName = `./enterprise/Enterprise${number}.jsx`;
+  }
+
+  const loader = lectureComponents[fileName];
+
+  if (!loader) {
     return <h1>Lecture Not Found</h1>;
   }
 
-  return <LectureComponent />;
+  const LectureComponent = lazy(loader);
+
+  return (
+    <Suspense fallback={<div>Loading lecture...</div>}>
+      <LectureComponent />
+    </Suspense>
+  );
 };
 
 export default ClassPage;

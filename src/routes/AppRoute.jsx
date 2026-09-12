@@ -3,7 +3,13 @@ import { Routes, Route } from "react-router-dom";
 
 import ProtectedRotes from "./ProtectedRotes";
 import ProtectedLectureRoutes from "./ProtectedLectureRoutes";
-import ClassPage from "../pages/lecture/ClassPage";
+// import ClassPage from "../pages/lecture/ClassPage";
+
+const pricingLectures = import.meta.glob(
+  "../pages/lecture/pricing/Pricing*.jsx",
+);
+
+const ClassPage = lazy(() => import("../pages/lecture/ClassPage"));
 
 const Lecture = lazy(() => import("../pages/lecture/Lecture"));
 
@@ -31,17 +37,6 @@ const CompDetailsPage = lazy(
 const ResetPassword = lazy(
   () => import("../pages/auth/components/ResetPassword"),
 );
-
-// Pricing lectures
-const Pricing1 = lazy(() => import("../pages/lecture/pricing/Pricing1"));
-
-const Pricing2 = lazy(() => import("../pages/lecture/pricing/Pricing2"));
-
-const Pricing3 = lazy(() => import("../pages/lecture/pricing/Pricing3"));
-
-const Pricing4 = lazy(() => import("../pages/lecture/pricing/Pricing4"));
-
-const Pricing5 = lazy(() => import("../pages/lecture/pricing/Pricing5"));
 
 const AppRoutes = () => {
   return (

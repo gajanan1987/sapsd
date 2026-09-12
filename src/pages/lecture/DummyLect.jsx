@@ -1,4 +1,3 @@
-import "../../../style/Lect/DummyLect.scss";
 const DummyLect = () => {
   return (
     <div className="lecture-common">

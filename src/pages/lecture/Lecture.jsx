@@ -1,31 +1,29 @@
-import { NavLink } from "react-router";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Lecture = () => {
+  const [pricingLectures] = useState(
+    Array.from({ length: 19 }, (_, index) => index + 65),
+  );
+
   return (
-    <>
-      <div>
-        <div className="lecture-container">
+    <div>
+      <div className="lecture-container">
+        <div>
           <h1>Pricing Lectures</h1>
+
           <ul>
-            <li>
-              <NavLink to="/lectures/pricing/lect-65">Leactures 65</NavLink>
-            </li>
-            <li>
-              <NavLink to="/lectures/pricing/lect-66">Leactures 66</NavLink>
-            </li>
-            <li>
-              <NavLink to="/lectures/pricing/lect-67">Leactures 67</NavLink>
-            </li>
-            <li>
-              <NavLink to="/lectures/pricing/lect-68">Leactures 68</NavLink>
-            </li>
-            <li>
-              <NavLink to="/lectures/pricing/lect-69">Leactures 69</NavLink>
-            </li>
+            {pricingLectures.map((lectureNo) => (
+              <li key={lectureNo}>
+                <NavLink to={`/lectures/pricing/lect-${lectureNo}`}>
+                  Lecture {lectureNo}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
