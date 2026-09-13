@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 // import "../../../style/Lect/pricing1.scss";
 const Pricing65 = () => {
   return (
@@ -8,6 +10,20 @@ const Pricing65 = () => {
           SAP SD | Core concept behind how the system determines price in a
           sales document
         </p>
+        {/* <div>
+          <ul>
+            <li>
+              <NavLink className="btn btn-primary-hallow" to={`/lectures/pricing/lect-${64}`}>
+                Previous Lecture
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="btn btn-primary-hallow" to={`/lectures/pricing/lect-${66}`}>
+                Next Lecture
+              </NavLink>
+            </li>
+          </ul>
+        </div> */}
       </div>
       <div className="container">
         {/* <!-- Section 1: Overview --> */}

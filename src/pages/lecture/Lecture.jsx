@@ -21,7 +21,7 @@ const Lecture = () => {
           <ul>
             {demoLectures.map((lectureNo) => (
               <li key={lectureNo}>
-                <NavLink to={`/lectures/demo/lect-${lectureNo}`}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/demo/lect-${lectureNo}`}>
                   Demo Lecture
                 </NavLink>
               </li>
@@ -34,7 +34,7 @@ const Lecture = () => {
           <ul>
             {enterpriseLectures.map((lectureNo) => (
               <li key={lectureNo}>
-                <NavLink to={`/lectures/enterprise/lect-${lectureNo}`}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/enterprise/lect-${lectureNo}`}>
                   Lecture {lectureNo}
                 </NavLink>
               </li>
@@ -47,7 +47,7 @@ const Lecture = () => {
           <ul>
             {pricingLectures.map((lectureNo) => (
               <li key={lectureNo}>
-                <NavLink to={`/lectures/pricing/lect-${lectureNo}`}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/pricing/lect-${lectureNo}`}>
                   Lecture {lectureNo}
                 </NavLink>
               </li>
