@@ -1026,56 +1026,58 @@ code {
   }
 }
 
-.bodyclass-blue {
+.body-blue {
   background: linear-gradient(135deg,
       #eef2ff 0%,
       #f7f8fc 40%,
       #eff6ff 100%);
 }
 
-.bodyclass-teal {
+.body-teal {
   background: linear-gradient(135deg,
       #ecfdf5 0%,
       #f7f8fc 40%,
       #e6fffa 100%);
 }
 
-.bodyclass-orange {
+.body-orange {
   background: linear-gradient(135deg, #fff7ed 0%, #f7f8fc 40%, #ecfdf5 100%);
 }
 
-.bodyclass-purple {
+.body-purple {
   background: linear-gradient(135deg, #f5f3ff 0%, #f7f8fc 40%, #eef2ff 100%);
 }
 
-.bodyclass-red {
+.body-red {
   background: linear-gradient(135deg, #fef2f2 0%, #f7f8fc 40%, #fff1f2 100%);
 }
 
-.bodyclass-green {
+.body-green {
   background: linear-gradient(135deg, #f0fdf4 0%, #f7f8fc 40%, #ecfdf5 100%);
 }
 
-.bodyclass-gold {
-  background: linear-gradient(120deg, var(--navy), var(--gold));
-  box-shadow: 0 8px 24px rgba(202, 138, 4, 0.25);
+.body-gold {
+  background: linear-gradient(135deg,
+      #fefce8 0%,
+      #f7f8fc 40%,
+      #fff7ed 100%);
 }
 
-.bodyclass-pink {
+.body-pink {
   background: linear-gradient(135deg,
       #fdf4ff 0%,
       #f7f8fc 40%,
       #fdf2f8 100%);
 }
 
-.bodyclass-indigo {
+.body-indigo {
   background: linear-gradient(135deg, #eef2ff 0%, #f7f8fc 40%, #e0e7ff 100%);
 }
 
-.bodyclass-brown {
+.body-brown {
   background: linear-gradient(135deg, #fef3e2 0%, #f7f8fc 40%, #fff7ed 100%);
 }
 
-.bodyclass-cyan {
+.body-cyan {
   background: linear-gradient(135deg, #ecfeff 0%, #f7f8fc 40%, #f0f9ff 100%);
 }

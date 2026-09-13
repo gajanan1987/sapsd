@@ -296,7 +296,7 @@ const Pricing75 = () => {
                 <td className="amount">₹22,500</td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colSpan="2">
                   <strong>Group Total</strong>
                 </td>
                 <td>

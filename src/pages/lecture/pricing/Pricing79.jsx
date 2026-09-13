@@ -148,7 +148,7 @@ const Pricing79 = () => {
                 <td>Does not print</td>
               </tr>
               <tr>
-                <td>Yes (special value)</td>
+                <td>S (special value)</td>
                 <td>
                   Prints at <strong>header level</strong> — used for all header
                   conditions
@@ -611,7 +611,7 @@ const Pricing79 = () => {
                 </td>
                 <td>
                   Whether the condition amount/value appears in output
-                  (printout/email/fax); X for normal printing, "Yes"
+                  (printout/email/fax); X for normal printing, "S"
                   specifically for header-level conditions
                 </td>
               </tr>
@@ -788,7 +788,7 @@ const Pricing79 = () => {
             <strong>Required</strong> (blocks saving if the condition isn't
             determined), <strong>Statistics</strong> (revisited with a live
             before/after Net Value comparison), <strong>Print</strong> (output
-            visibility, with header conditions always set to "Yes"),
+            visibility, with header conditions always set to "S"),
             <strong>Account Key</strong> (demonstrated end-to-end with a real
             accounting error and its OB40 fix), <strong>Accruals</strong> (the
             provisional rebate-settlement account, key ERU), and

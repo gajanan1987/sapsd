@@ -66,7 +66,7 @@ const Pricing66 = () => {
                 <td>Standard base price</td>
               </tr>
               <tr>
-                <td rowspan="4">
+                <td rowSpan="4">
                   <span className="tag tag-discount">Discounts</span>
                 </td>
                 <td>
@@ -102,7 +102,7 @@ const Pricing66 = () => {
                 <td>Freight / Transportation</td>
               </tr>
               <tr>
-                <td rowspan="4">
+                <td rowSpan="4">
                   <span className="tag tag-tax">Tax (GST — practice)</span>
                 </td>
                 <td>
@@ -123,7 +123,7 @@ const Pricing66 = () => {
                 <td>SGST</td>
               </tr>
               <tr>
-                <td className="note-italic" colspan="2">
+                <td className="note-italic" colSpan="2">
                   (Standard/production GST condition types may differ — these
                   are practice-system examples)
                 </td>

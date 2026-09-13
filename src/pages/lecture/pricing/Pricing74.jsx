@@ -160,7 +160,7 @@ const Pricing74 = () => {
                 <td className="amount">₹20,000</td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colSpan="2">
                   <strong>Total</strong>
                 </td>
                 <td>
@@ -217,7 +217,7 @@ const Pricing74 = () => {
                 <td>Not considered — excluded from group total</td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colSpan="2">
                   <strong>Group Total (PMAT1+2+3)</strong>
                 </td>
                 <td>
@@ -500,7 +500,7 @@ const Pricing74 = () => {
                 <td className="amount">₹10,784.31</td>
               </tr>
               <tr>
-                <td colspan="3">
+                <td colSpan="3">
                   <strong>Total Document Value</strong>
                 </td>
                 <td>
