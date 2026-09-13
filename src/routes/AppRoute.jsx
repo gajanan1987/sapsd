@@ -6,7 +6,7 @@ import ProtectedLectureRoutes from "./ProtectedLectureRoutes";
 // import ClassPage from "../pages/lecture/ClassPage";
 
 const pricingLectures = import.meta.glob(
-  "../pages/lecture/pricing/Pricing*.jsx",
+  "../pages/lecture/**/*.jsx",
 );
 
 const ClassPage = lazy(() => import("../pages/lecture/ClassPage"));

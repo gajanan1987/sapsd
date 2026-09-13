@@ -9,16 +9,19 @@ const ClassPage = () => {
 
   let fileName = "";
 
-  if (category === "pricing") {
+  if (category === "demo") {
     const number = lectureNo?.replace("lect-", "");
-
-    fileName = `./pricing/Pricing${number}.jsx`;
+    fileName = `./demo/demo${number}.jsx`;
   }
 
   if (category === "enterprise") {
     const number = lectureNo?.replace("lect-", "");
-
     fileName = `./enterprise/Enterprise${number}.jsx`;
+  }
+
+  if (category === "pricing") {
+    const number = lectureNo?.replace("lect-", "");
+    fileName = `./pricing/Pricing${number}.jsx`;
   }
 
   const loader = lectureComponents[fileName];

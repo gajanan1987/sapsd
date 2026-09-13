@@ -13,7 +13,6 @@ function App() {
   const location = useLocation();
 
   const isLecturePage = location.pathname.includes("lect-");
-  console.log("🚀 ~ App ~ isLecturePage:", isLecturePage);
   useEffect(() => {
     if (!user) {
       dispatch(fetchSession());
