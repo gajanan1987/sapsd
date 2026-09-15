@@ -6,7 +6,16 @@ const Lecture = () => {
     Array.from({ length: 1 }, (_, index) => index + 1),
   );
   const [enterpriseLectures] = useState(
-    Array.from({ length: 2 }, (_, index) => index + 1),
+    Array.from({ length: 13 }, (_, index) => index + 1),
+  );
+  const [customerMasterLectures] = useState(
+    Array.from({ length: 7 }, (_, index) => index + 14),
+  );
+  const [materialMasterLectures] = useState(
+    Array.from({ length: 20 }, (_, index) => index + 21),
+  );
+  const [businessLectures] = useState(
+    Array.from({ length: 24 }, (_, index) => index + 41),
   );
   const [pricingLectures] = useState(
     Array.from({ length: 19 }, (_, index) => index + 65),
@@ -28,6 +37,7 @@ const Lecture = () => {
             ))}
           </ul>
         </div>
+
         <div>
           <h1>Enterprise Lectures</h1>
 
@@ -41,9 +51,51 @@ const Lecture = () => {
             ))}
           </ul>
         </div>
+
+        <div>
+          <h1>Customer Master Lectures</h1>
+
+          <ul>
+            {customerMasterLectures.map((lectureNo) => (
+              <li key={lectureNo}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/customer-master/lect-${lectureNo}`}>
+                  Lecture {lectureNo}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h1>Material Master Lectures</h1>
+
+          <ul>
+            {materialMasterLectures.map((lectureNo) => (
+              <li key={lectureNo}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/material-master/lect-${lectureNo}`}>
+                  Lecture {lectureNo}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h1>Business Lectures</h1>
+
+          <ul>
+            {businessLectures.map((lectureNo) => (
+              <li key={lectureNo}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/business/lect-${lectureNo}`}>
+                  Lecture {lectureNo}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div>
           <h1>Pricing Lectures</h1>
-
           <ul>
             {pricingLectures.map((lectureNo) => (
               <li key={lectureNo}>
