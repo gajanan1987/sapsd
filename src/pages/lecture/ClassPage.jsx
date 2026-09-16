@@ -29,6 +29,16 @@ const ClassPage = () => {
     fileName = `./material/Material${number}.jsx`;
   }
 
+  if (category === "business-process") {
+    const number = lectureNo?.replace("lect-", "");
+    fileName = `./business/Business${number}.jsx`;
+  }
+
+  if (category === "sales-document") {
+    const number = lectureNo?.replace("lect-", "");
+    fileName = `./salesdoc/SalesDocument${number}.jsx`;
+  }
+
   if (category === "pricing") {
     const number = lectureNo?.replace("lect-", "");
     fileName = `./pricing/Pricing${number}.jsx`;

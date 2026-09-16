@@ -480,6 +480,7 @@ code {
   background: #f8fafc;
   border-radius: 10px;
   border-left: 4px solid var(--indigo);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
   &::before {
     content: counter(step);

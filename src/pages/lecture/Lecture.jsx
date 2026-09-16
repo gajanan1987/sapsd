@@ -15,10 +15,13 @@ const Lecture = () => {
     Array.from({ length: 20 }, (_, index) => index + 21),
   );
   const [businessLectures] = useState(
-    Array.from({ length: 24 }, (_, index) => index + 41),
+    Array.from({ length: 8 }, (_, index) => index + 41),
+  );
+  const [salesDocumentLectures] = useState(
+    Array.from({ length: 16 }, (_, index) => index + 49),
   );
   const [pricingLectures] = useState(
-    Array.from({ length: 19 }, (_, index) => index + 65),
+    Array.from({ length: 21 }, (_, index) => index + 65),
   );
 
   return (
@@ -81,12 +84,26 @@ const Lecture = () => {
         </div>
 
         <div>
-          <h1>Business Lectures</h1>
+          <h1>Business Process Lectures</h1>
 
           <ul>
             {businessLectures.map((lectureNo) => (
               <li key={lectureNo}>
-                <NavLink className="btn btn-primary-hallow" to={`/lectures/business/lect-${lectureNo}`}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/business-process/lect-${lectureNo}`}>
+                  Lecture {lectureNo}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h1>Sales Document Lectures</h1>
+
+          <ul>
+            {salesDocumentLectures.map((lectureNo) => (
+              <li key={lectureNo}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/sales-document/lect-${lectureNo}`}>
                   Lecture {lectureNo}
                 </NavLink>
               </li>
