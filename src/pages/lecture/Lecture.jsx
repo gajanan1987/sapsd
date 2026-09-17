@@ -21,7 +21,7 @@ const Lecture = () => {
     Array.from({ length: 16 }, (_, index) => index + 49),
   );
   const [pricingLectures] = useState(
-    Array.from({ length: 21 }, (_, index) => index + 65),
+    Array.from({ length: 22 }, (_, index) => index + 65),
   );
 
   return (

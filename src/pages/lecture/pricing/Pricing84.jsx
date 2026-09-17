@@ -156,16 +156,12 @@ const Pricing84 = () => {
             <span className="cm">* KOMP-PSTYV = Item Category</span>
             <span className="kw">IF</span> KOMP-PSTYV = 'TANN'.
 
-            <span className="cm"
-            >* KOMP-UEPOS = Higher Level Item number of this free goods
-              sub-item</span
-            >
+            <span className="cm">* KOMP-UEPOS = Higher Level Item number of this free goods
+              sub-item</span>
             w_higher_item = KOMP-UEPOS.
 
-            <span className="cm"
-            >* Pass the higher-level item number into the pricing structure's
-              item field</span
-            >
+            <span className="cm">* Pass the higher-level item number into the pricing structure's
+              item field</span>
             <span className="kw">LOOP AT</span> KOMV
             <span className="kw">WHERE</span> KPOSN = w_higher_item
             <span className="kw">AND</span> KSCHL = 'PDIS'. KOMV-KINAKT = 'X'.

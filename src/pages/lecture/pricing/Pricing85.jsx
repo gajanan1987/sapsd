@@ -20,10 +20,9 @@ const Pricing85 = () => {
           </h2>
           <div className="callout blue">
             Confirmed complete from last class:
-            <strong
-            >SPRO → Cross-Application Components → General Application Functions
-              → Business Place → Assign Business Place to Plant</strong
-            >. Plant P100 was assigned to its Business Place. This closes out that
+            <strong>SPRO → Cross-Application Components → General Application Functions
+              → Business Place → Assign Business Place to Plant</strong>.
+            Plant P100 was assigned to its Business Place. This closes out that
             GST step.
           </div>
           <div className="callout">
