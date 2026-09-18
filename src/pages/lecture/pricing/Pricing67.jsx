@@ -353,7 +353,7 @@ const Pricing67 = () => {
           </h3>
           <ul>
             <li>
-              Create material <code>Vaccine 1500</code> (copy from a reference
+              Create material <code>VAXINE1500</code> (copy from a reference
               material)
             </li>
             <li>
@@ -390,10 +390,10 @@ const Pricing67 = () => {
               Continue
             </div>
             <div className="step">
-              Maintain 3 records here: <code>100551</code> + Vaccine 1500 =
+              Maintain 3 records here: <code>100551</code> + VAXINE1500 =
               <span className="price-final">9500</span>, <code>100552</code> +
-              Vaccine 1500 = <span className="price-final">9500</span>,{" "}
-              <code>100560</code> + Vaccine 1500 ={" "}
+              VAXINE1500 = <span className="price-final">9500</span>,{" "}
+              <code>100560</code> + VAXINE1500 ={" "}
               <span className="price-final">9500</span> → Save after each (or
               together)
             </div>
@@ -402,10 +402,10 @@ const Pricing67 = () => {
               <em>Price List/Material</em> (table 677) → Continue
             </div>
             <div className="step">
-              Maintain: <code>P1</code> + Vaccine 1500 =
+              Maintain: <code>P1</code> + VAXINE1500 =
               <span className="price-final">9800</span>, <code>P2</code> +
-              Vaccine 1500 = <span className="price-final">9700</span>,{" "}
-              <code>P3</code> + Vaccine 1500 ={" "}
+              VAXINE1500 = <span className="price-final">9700</span>,{" "}
+              <code>P3</code> + VAXINE1500 ={" "}
               <span className="price-final">9600</span> → Save
             </div>
             <div className="step">
@@ -413,7 +413,7 @@ const Pricing67 = () => {
               <em>Material</em> only (table 678) → Continue
             </div>
             <div className="step">
-              Maintain: Vaccine 1500 ={" "}
+              Maintain: VAXINE1500 ={" "}
               <span className="price-final">10,000</span> → Save
             </div>
           </div>
@@ -446,25 +446,25 @@ const Pricing67 = () => {
             <tbody>
               <tr>
                 <td>100551</td>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td className="price-final">9500</td>
                 <td>Special customer record (most specific table hit)</td>
               </tr>
               <tr>
                 <td>100552</td>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td className="price-final">9500</td>
                 <td>Special customer record</td>
               </tr>
               <tr>
                 <td>100553</td>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td className="price-final">9800</td>
                 <td>Falls to Price List P1</td>
               </tr>
               <tr>
                 <td>100558</td>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td className="price-final">10,000</td>
                 <td>No special/price-list record → Material only</td>
               </tr>
@@ -472,7 +472,7 @@ const Pricing67 = () => {
           </table>
           <div className="callout blue">
             ✅ Example verified in class: Order for customer <code>100551</code>
-            , material Vaccine 1500, qty 100 → price picked up =
+            , material VAXINE1500, qty 100 → price picked up =
             <strong>9500</strong>, exactly matching the Customer+Material
             condition record.
           </div>

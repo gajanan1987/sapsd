@@ -266,11 +266,11 @@ const Pricing69 = () => {
               </tr>
               <tr>
                 <td>Customer + Material</td>
-                <td>100551, 100552, 100560 + Vaccine 1500 = 3% each</td>
+                <td>100551, 100552, 100560 + VAXINE1500 = 3% each</td>
               </tr>
               <tr>
                 <td>Material</td>
-                <td>Vaccine 1500 = 2%</td>
+                <td>VAXINE1500 = 2%</td>
               </tr>
             </tbody>
           </table>
@@ -432,7 +432,7 @@ const Pricing69 = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td>100</td>
                 <td>₹9,80,000</td>
               </tr>
@@ -474,7 +474,7 @@ const Pricing69 = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td>₹9,80,000</td>
                 <td className="discount-amt">₹15,909.09</td>
               </tr>

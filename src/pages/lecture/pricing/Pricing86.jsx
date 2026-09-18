@@ -491,7 +491,7 @@ const Pricing86 = () => {
             <div className="step">
               <span className="tcode">VA01</span>, order for customer
               <code>HD02100553</code> (Region 36 — different from the
-              Mumbai plant's Region 13), material (Vaccine 1500),
+              Mumbai plant's Region 13), material (VAXINE1500),
               quantity 100.
             </div>
             <div className="step">

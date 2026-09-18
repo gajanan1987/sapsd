@@ -547,12 +547,12 @@ const Pricing70 = () => {
               </tr>
               <tr>
                 <td>PPAC (Packing)</td>
-                <td>Sales Org + Material (Vaccine 1500)</td>
+                <td>Sales Org + Material (VAXINE1500)</td>
                 <td className="amount">₹100 per unit</td>
               </tr>
               <tr>
                 <td>PLOD (Loading)</td>
-                <td>Sales Org + Material (Vaccine 1500)</td>
+                <td>Sales Org + Material (VAXINE1500)</td>
                 <td className="amount">₹40 per unit</td>
               </tr>
             </tbody>

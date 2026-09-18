@@ -101,7 +101,7 @@ const Pricing77 = () => {
           <h3>Step 4: Condition Records with Limits</h3>
           <p>
             T-code: <span className="tcode">VK11</span> — Condition Type PUPP,
-            Sales Org P100, Material Vaccine 1500, Amount ₹4,000
+            Sales Org P100, Material VAXINE1500, Amount ₹4,000
           </p>
           <div className="callout blue">
             Select the record → go to <strong>Additional Data</strong> → 3

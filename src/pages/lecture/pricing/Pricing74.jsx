@@ -456,7 +456,7 @@ const Pricing74 = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td>50</td>
                 <td>₹5,00,000</td>
               </tr>
@@ -480,14 +480,14 @@ const Pricing74 = () => {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td>50</td>
                 <td>₹5,00,000</td>
                 <td className="amount">₹24,509.81</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Vaccine 1500 (2nd line)</td>
+                <td>VAXINE1500 (2nd line)</td>
                 <td>50</td>
                 <td>₹5,00,000</td>
                 <td className="amount">₹14,705.88</td>

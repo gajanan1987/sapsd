@@ -94,7 +94,7 @@ const Pricing71 = () => {
           </table>
           <p className="note-text">
             Maintain this for all sample customers (100551–100560) and the
-            material (Vaccine 1500).
+            material (VAXINE1500).
           </p>
           <h3>Step 4: Place in Pricing Procedure</h3>
           <p>

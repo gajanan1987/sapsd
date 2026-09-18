@@ -70,7 +70,7 @@ const Pricing82 = () => {
                 </td>
               </tr>
               <tr>
-                <td>Vaccine 1500 (not marked)</td>
+                <td>VAXINE1500 (not marked)</td>
                 <td>No P111</td>
                 <td>Normal 30 days only</td>
               </tr>
@@ -90,15 +90,15 @@ const Pricing82 = () => {
           </h2>
           <div className="callout purple">
             Client requirement: if a customer purchases certain
-            <strong>fast-moving materials</strong>, don't offer any credit
+            <strong> fast-moving materials</strong>, don't offer any credit
             period at all for those items — even if the customer's normal terms
             include 30 days credit.
           </div>
           <div className="callout blue">
             Interview-style answer: the control lives in
-            <strong>Condition Records</strong> →<strong>Additional Data</strong>{" "}
+            <strong> Condition Records</strong> →<strong> Additional Data</strong>{" "}
             → field
-            <strong>Terms of Payment</strong>, overridden to a "no credit" term
+            <strong> Terms of Payment</strong>, overridden to a "no credit" term
             (e.g. <code>0001</code>).
           </div>
           <h3>Configuration</h3>
@@ -115,7 +115,7 @@ const Pricing82 = () => {
             <div className="step">
               Maintain condition records — T-code&nbsp;
               <span className="tcode">VK11</span>, condition type P222, material
-              Vaccine 1500 (fast-moving), dummy ₹1
+              VAXINE1500 (fast-moving), dummy ₹1
             </div>
             <div className="step">
               Select the record → <strong>Additional Data</strong> → set
@@ -133,7 +133,7 @@ const Pricing82 = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Vaccine 1500 (fast-moving, has P222)</td>
+                <td>VAXINE1500 (fast-moving, has P222)</td>
                 <td>Dummy ₹1 shown</td>
                 <td>
                   <strong>0001</strong> (no credit) — overrides customer's
@@ -153,7 +153,7 @@ const Pricing82 = () => {
               item-level payment terms take precedence over header-level
             </strong>
             at invoicing. Even though the order header still shows P030 (the
-            customer's default), the specific line item carrying Vaccine 1500
+            customer's default), the specific line item carrying VAXINE1500
             gets 0001 applied — and that item-level value is what actually
             determines the invoice's payment behavior for that line.
           </div>
@@ -167,8 +167,8 @@ const Pricing82 = () => {
           <div className="callout purple">
             Client requirement: they're adding a new discount condition type to
             their existing pricing procedure, and want it to
-            <strong>automatically appear</strong> when creating invoices for
-            <strong>sales orders that were already created before</strong> the
+            <strong> automatically appear</strong> when creating invoices for
+            <strong> sales orders that were already created before</strong> the
             condition type was added.
           </div>
           <h3>The Problem</h3>

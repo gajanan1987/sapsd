@@ -273,7 +273,7 @@ const Pricing65 = () => {
             <span className="badge">5</span> Worked Example
           </h2>
           <p>
-            <strong>Material:</strong> Vaccine 1500
+            <strong>Material:</strong> VAXINE1500
           </p>
           <div className="legend">
             <span>

@@ -18,7 +18,7 @@ const Pricing78 = () => {
           </h2>
           <div className="callout red">
             Recap from Lecture 77's Exclusion field: institution customer 100551
-            orders Vaccine 1500, 100 units. Result:
+            orders VAXINE1500, 100 units. Result:
             <strong>4 discounts</strong> apply simultaneously — Material,
             Customer/Material, Customer, and Price Group. This is
             <strong>lost revenue</strong> for the company.

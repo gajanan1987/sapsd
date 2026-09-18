@@ -544,7 +544,7 @@ const Pricing68 = () => {
                 <td>Quantity-based (₹ per unit)</td>
                 <td>Material only</td>
                 <td>
-                  Vaccine 1500 → <span className="discount-amt">₹200</span>
+                  VAXINE1500 → <span className="discount-amt">₹200</span>
                 </td>
               </tr>
               <tr>
@@ -555,7 +555,7 @@ const Pricing68 = () => {
                 <td>Quantity-based (₹ per unit)</td>
                 <td>Customer + Material</td>
                 <td>
-                  100551, 100552, 100560 + Vaccine 1500 →
+                  100551, 100552, 100560 + VAXINE1500 →
                   <span className="discount-amt">₹500</span> each
                 </td>
               </tr>
@@ -598,11 +598,11 @@ const Pricing68 = () => {
           <div className="stepper">
             <div className="step">
               VK11 → Condition Type <code>P004</code> → Key Combination:
-              Material → Vaccine 1500 = ₹200 → Save
+              Material → VAXINE1500 = ₹200 → Save
             </div>
             <div className="step">
               VK11 → Condition Type <code>P005</code> → Key Combination:
-              Customer/Material → 100551 / 100552 / 100560 + Vaccine 1500 = ₹500
+              Customer/Material → 100551 / 100552 / 100560 + VAXINE1500 = ₹500
               each → Save
             </div>
             <div className="step">
@@ -641,13 +641,13 @@ const Pricing68 = () => {
                 <td>Material Discount (P004)</td>
                 <td>✅</td>
                 <td className="discount-amt">₹200</td>
-                <td>Material = Vaccine 1500 (applies to everyone)</td>
+                <td>Material = VAXINE1500 (applies to everyone)</td>
               </tr>
               <tr>
                 <td>Customer/Material Discount (P005)</td>
                 <td>✅</td>
                 <td className="discount-amt">₹500</td>
-                <td>Customer 100551 + Vaccine 1500 record exists</td>
+                <td>Customer 100551 + VAXINE1500 record exists</td>
               </tr>
               <tr>
                 <td>Customer Discount (P007)</td>
@@ -682,7 +682,7 @@ const Pricing68 = () => {
                 <td>Material Discount (P004)</td>
                 <td>✅</td>
                 <td className="discount-amt">₹200</td>
-                <td>Material = Vaccine 1500 (applies to everyone)</td>
+                <td>Material = VAXINE1500 (applies to everyone)</td>
               </tr>
               <tr>
                 <td>Customer/Material Discount (P005)</td>

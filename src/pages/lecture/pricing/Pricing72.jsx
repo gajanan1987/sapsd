@@ -560,7 +560,7 @@ const Pricing72 = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Vaccine 1500</td>
+                <td>VAXINE1500</td>
                 <td className="amount">₹5,00,000</td>
               </tr>
             </tbody>
