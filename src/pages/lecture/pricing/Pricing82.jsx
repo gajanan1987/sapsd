@@ -17,39 +17,39 @@ const Pricing82 = () => {
           </h2>
           <div className="callout purple">
             Client requirement: if a customer purchases certain
-            <strong>slow-moving materials</strong>, offer them
-            <strong>20 extra days</strong> of credit period on top of their
+            <strong> slow-moving materials</strong>, offer them
+            <strong> 20 extra days</strong> of credit period on top of their
             normal terms.
           </div>
           <div className="callout blue">
             Interview-style answer: the control lives in
-            <strong>Condition Records</strong> →<strong>Additional Data</strong>{" "}
+            <strong> Condition Records</strong> → <strong>Additional Data</strong>{" "}
             → field
-            <strong>"Additional Value Days"</strong>.
+            <strong> "Additional Value Days"</strong>.
           </div>
           <h3>Configuration</h3>
           <div className="stepper">
             <div className="step">
-              Create condition type <code>P111</code> — T-code
+              Create condition type <code>P111</code> — T-code&nbsp;
               <span className="tcode">V/06</span>, copy from <code>K004</code>,
               description "Additional Credit Period" → Save
             </div>
             <div className="step">
-              Place in Pricing Procedure — T-code
+              Place in Pricing Procedure — T-code&nbsp;
               <span className="tcode">V/08</span>, at the very last step (e.g.
               260), <strong>Statistics checked</strong> (this is a dummy
               condition, never meant to affect Net Value)
             </div>
             <div className="step">
-              Maintain condition records — T-code
+              Maintain condition records — T-code&nbsp;
               <span className="tcode">VK11</span>, condition type P111, key
               combination Sales Org + Distribution Channel + Material
             </div>
             <div className="step">
               For each slow-moving material (e.g. PMAT1, PMAT2): enter a dummy
               amount of <strong>₹1</strong>, select the record →
-              <strong>Additional Data</strong> → set
-              <strong>Additional Value Days = 20</strong>
+              <strong> Additional Data</strong> → set
+              <strong> Additional Value Days = 20</strong>
             </div>
           </div>
           <h3>Result</h3>
@@ -104,22 +104,22 @@ const Pricing82 = () => {
           <h3>Configuration</h3>
           <div className="stepper">
             <div className="step">
-              Create condition type <code>P222</code> — T-code
+              Create condition type <code>P222</code> — T-code&nbsp;
               <span className="tcode">V/06</span>, copy from <code>K004</code>,
               description "No Credit" → Save
             </div>
             <div className="step">
-              Place in Pricing Procedure — T-code
+              Place in Pricing Procedure — T-code&nbsp;
               <span className="tcode">V/08</span>, last step (e.g. 270)
             </div>
             <div className="step">
-              Maintain condition records — T-code
+              Maintain condition records — T-code&nbsp;
               <span className="tcode">VK11</span>, condition type P222, material
               Vaccine 1500 (fast-moving), dummy ₹1
             </div>
             <div className="step">
               Select the record → <strong>Additional Data</strong> → set
-              <strong>Terms of Payment = 0001</strong> (no credit)
+              <strong> Terms of Payment = 0001</strong> (no credit)
             </div>
           </div>
           <h3>Result</h3>

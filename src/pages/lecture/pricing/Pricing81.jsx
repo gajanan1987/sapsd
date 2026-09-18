@@ -19,7 +19,7 @@ const Pricing81 = () => {
           </h2>
           <div className="callout">
             <strong>Requirement</strong> is a condition that the system checks
-            <strong>every single time</strong> while determining a condition
+            <strong> every single time</strong> while determining a condition
             type into the sales document.
           </div>
           <table className="table-reponsive">
@@ -232,7 +232,7 @@ const Pricing81 = () => {
                 <td>Intercompany (IV01, PI01)</td>
                 <td>
                   Ordering Company ≠ Delivering Company (opposite of Requirement
-                  4's check); Plant should not be blank
+                  4's check); <br />Plant should not be blank
                 </td>
               </tr>
             </tbody>
@@ -253,7 +253,7 @@ const Pricing81 = () => {
             Requirements
           </h2>
           <p>
-            T-code: <span className="tcode">VYFM</span> → Requirements → Pricing
+            T-code: <span className="tcode">VOFM</span> → Requirements → Pricing
           </p>
           <table className="table-reponsive">
             <thead>
@@ -278,7 +278,7 @@ const Pricing81 = () => {
                 <td>Best practice</td>
                 <td>
                   Always copy the closest matching
-                  <strong>standard</strong> requirement first, then add your
+                  <strong> standard</strong> requirement first, then add your
                   custom logic on top
                 </td>
               </tr>
@@ -293,7 +293,7 @@ const Pricing81 = () => {
           </h2>
           <div className="callout purple">
             Client requirement: they use <strong>two</strong> base price
-            condition types in their pricing procedure — <code>PPR0</code> and
+            condition types in their pricing procedure — <code>PPR0</code> and &nbsp;
             <code>PR00</code>.
           </div>
           <table className="table-reponsive">
@@ -322,9 +322,9 @@ const Pricing81 = () => {
           <h3>Building the Custom Requirement</h3>
           <div className="stepper">
             <div className="step">
-              Go to <span className="tcode">VYFM</span> → find the next
+              Go to <span className="tcode">VOFM</span> → find the next
               available user-defined number (e.g. 901–903 already taken → use
-              <strong>904</strong> for PPR0's new requirement)
+              <strong> 904</strong> for PPR0's new requirement)
             </div>
             <div className="step">
               Copy the code from the closest standard requirement —
@@ -333,13 +333,13 @@ const Pricing81 = () => {
             </div>
             <div className="step">
               Add a third check: item category (<code>KOMP-PSTYV</code>)
-              <strong>NOT equal to</strong> TAS or TAB → this becomes the new
+              <strong> NOT equal to</strong> TAS or TAB → this becomes the new
               custom requirement for PPR0
             </div>
             <div className="step">
               A separate requirement (e.g. 905) is built for PR00, copying the
               same base logic but checking item category
-              <strong>EQUALS</strong> TAS or TAB instead
+              <strong> EQUALS</strong> TAS or TAB instead
             </div>
           </div>
           <h3>Item Category Reference</h3>
@@ -381,7 +381,7 @@ const Pricing81 = () => {
         {/* <!-- Section 8: Full pricing determination algorithm --> */}
         <div className="card teal">
           <h2>
-            <span className="badge">🧠</span> The Complete Pricing Determination
+            <span className="badge">🧠</span> How Pricing Determines into Sales Document / The Complete Pricing Determination
             Algorithm
           </h2>
           <div className="callout teal">
@@ -396,7 +396,7 @@ const Pricing81 = () => {
             </div>
             <div className="step">
               Go inside the Pricing Procedure → move to the
-              <strong>first step</strong> → take its Condition Type
+              <strong> first step</strong> → take its Condition Type
             </div>
             <div className="step">
               Check whether the <strong>Requirement</strong> is fulfilled for
@@ -404,15 +404,15 @@ const Pricing81 = () => {
             </div>
             <div className="step">
               If fulfilled → go inside the condition type → take its
-              <strong>Access Sequence</strong>
+              <strong> Access Sequence</strong>
             </div>
             <div className="step">
               Go inside the Access Sequence → take its
-              <strong>Condition Tables</strong> (in specificity order)
+              <strong> Condition Tables</strong> (in specificity order)
             </div>
             <div className="step">
               Go inside each Condition Table → take the
-              <strong>combination of fields</strong>
+              <strong> combination of fields</strong>
             </div>
             <div className="step">
               Go to <strong>Condition Records</strong> → check for a valid
@@ -420,7 +420,7 @@ const Pricing81 = () => {
             </div>
             <div className="step">
               If a valid record is found → the system
-              <strong>determines it into the sales document</strong>
+              <strong> determines it into the sales document</strong>
             </div>
           </div>
           <div className="flow">
@@ -540,7 +540,7 @@ const Pricing81 = () => {
                   numbering rule?
                 </td>
                 <td>
-                  T-code VYFM, developed by an ABAP developer; user-defined
+                  T-code VOFM, developed by an ABAP developer; user-defined
                   requirement numbers must be 900 and above
                 </td>
               </tr>
@@ -640,7 +640,7 @@ const Pricing81 = () => {
               </tr>
               <tr>
                 <td>
-                  <span className="tcode">VYFM</span>
+                  <span className="tcode">VOFM</span>
                 </td>
                 <td>
                   Develop new/custom pricing requirements (Requirements →
@@ -712,7 +712,7 @@ const Pricing81 = () => {
               <tr>
                 <td>User-defined range</td>
                 <td>Custom requirements</td>
-                <td>900 and above, via VYFM</td>
+                <td>900 and above, via VOFM</td>
               </tr>
             </tbody>
           </table>
@@ -724,7 +724,7 @@ const Pricing81 = () => {
           </h2>
           <p>
             This lecture completed the 16-field series with
-            <strong>Requirement</strong> — the gatekeeper check the system runs
+            <strong> Requirement</strong> — the gatekeeper check the system runs
             before determining any condition type. Standard requirements were
             decoded field-by-field: Requirement 2 (base price/discounts,
             checking Item Category and Exclusion), Requirement 4 (cost, checking
@@ -733,7 +733,7 @@ const Pricing81 = () => {
             Requirement 24 (rebate, billing document check), and Requirement 22
             (intercompany, opposite-company check from Requirement 4). A
             real-world scenario showed how to build a{" "}
-            <strong>custom requirement</strong> via VYFM (900+,
+            <strong>custom requirement</strong> via VOFM (900+,
             ABAPer-developed, always copied from the closest standard) to let
             two base price condition types coexist based on item category (TAN
             vs TAS/TAB). The lecture closed by tying the entire pricing module

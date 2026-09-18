@@ -44,6 +44,11 @@ const ClassPage = () => {
     fileName = `./pricing/Pricing${number}.jsx`;
   }
 
+  if (category === "freegoods") {
+    const number = lectureNo?.replace("lect-", "");
+    fileName = `./freegoods/Freegoods${number}.jsx`;
+  }
+
   const loader = lectureComponents[fileName];
 
   if (!loader) {

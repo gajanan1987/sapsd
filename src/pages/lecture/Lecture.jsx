@@ -24,12 +24,15 @@ const Lecture = () => {
     Array.from({ length: 22 }, (_, index) => index + 65),
   );
 
+  const [freegoodsLectures] = useState(
+    Array.from({ length: 20 }, (_, index) => index + 87),
+  );
+
   return (
     <div>
       <div className="lecture-container">
         <div>
           <h1>Demo Lectures</h1>
-
           <ul>
             {demoLectures.map((lectureNo) => (
               <li key={lectureNo}>
@@ -43,7 +46,6 @@ const Lecture = () => {
 
         <div>
           <h1>Enterprise Lectures</h1>
-
           <ul>
             {enterpriseLectures.map((lectureNo) => (
               <li key={lectureNo}>
@@ -57,7 +59,6 @@ const Lecture = () => {
 
         <div>
           <h1>Customer Master Lectures</h1>
-
           <ul>
             {customerMasterLectures.map((lectureNo) => (
               <li key={lectureNo}>
@@ -71,7 +72,6 @@ const Lecture = () => {
 
         <div>
           <h1>Material Master Lectures</h1>
-
           <ul>
             {materialMasterLectures.map((lectureNo) => (
               <li key={lectureNo}>
@@ -85,7 +85,6 @@ const Lecture = () => {
 
         <div>
           <h1>Business Process Lectures</h1>
-
           <ul>
             {businessLectures.map((lectureNo) => (
               <li key={lectureNo}>
@@ -99,7 +98,6 @@ const Lecture = () => {
 
         <div>
           <h1>Sales Document Lectures</h1>
-
           <ul>
             {salesDocumentLectures.map((lectureNo) => (
               <li key={lectureNo}>
@@ -123,6 +121,21 @@ const Lecture = () => {
             ))}
           </ul>
         </div>
+
+        <div>
+          <h1>Free Goods Lectures</h1>
+          <ul>
+            {freegoodsLectures.map((lectureNo) => (
+              <li key={lectureNo}>
+                <NavLink className="btn btn-primary-hallow" to={`/lectures/freegoods/lect-${lectureNo}`}>
+                  Lecture {lectureNo}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+
       </div>
     </div>
   );
