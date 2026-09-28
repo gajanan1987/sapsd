@@ -214,7 +214,7 @@ const Pricing82 = () => {
           <div className="callout green">
             Go to the newly added condition type's controls (
             <span className="tcode">V/06</span>) → set{" "}
-            <strong>Condition Category = L</strong>. This flags the condition
+            <strong> Condition Category = L</strong>. This flags the condition
             type to be dynamically (re)checked even when billing orders that
             were created before it existed.
           </div>
@@ -226,7 +226,7 @@ const Pricing82 = () => {
           </h2>
           <div className="callout">
             Whenever a client's requirement
-            <strong>cannot be met through standard configuration</strong>, the
+            <strong> cannot be met through standard configuration</strong>, the
             next option is a <strong>User Exit</strong> — custom ABAP logic
             hooked into the standard pricing process.
           </div>
@@ -324,11 +324,11 @@ const Pricing82 = () => {
           <h3>The Logic (Pseudo-ABAP)</h3>
           <div className="code-block">
             <span className="cm">
-              * Count how many times P004 appears in the pricing table
+              * Count how many times P004 appears in the pricing table&nbsp;
             </span>
             count = 0.
             <span className="kw">LOOP AT</span> KOMV
-            <span className="kw">WHERE</span> KSCHL = 'P004'. count = count + 1.
+            <span className="kw"> WHERE</span> KSCHL = 'P004'. count = count + 1.
             <span className="kw">ENDLOOP</span>.<span className="kw">IF</span>{" "}
             count &gt; 1.
             <span className="kw">MESSAGE</span> 'Condition type P004 already
@@ -362,7 +362,7 @@ const Pricing82 = () => {
           </table>
           <div className="callout blue">
             Technical reference: <code>KOMV</code> is the internal pricing
-            communication structure/table used inside these user exits;
+            communication structure/table used inside these user exits;&nbsp;
             <code>KSCHL</code> is its field for Condition Type. Verified via
             T-code <span className="tcode">SE11</span> (ABAP Dictionary →
             Structure Display).

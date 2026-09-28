@@ -45,7 +45,7 @@ const Pricing84 = () => {
             Client requirement: for <strong>any line item</strong>, if the system
             determines <strong>free goods</strong> against that item, the system
             should automatically
-            <strong>inactivate the discount condition type</strong>
+            <strong> inactivate the discount condition type </strong>
             (<code>PDIS</code>) for that main (paid) line item.
           </div>
           <h3>Sales Order Scenario</h3>
@@ -87,7 +87,7 @@ const Pricing84 = () => {
                 <td className="tag tag-orange">TANN</td>
                 <td>—</td>
                 <td>
-                  System-generated free goods line;
+                  System-generated free goods line; <br />
                   <strong>Higher Level Item = 30</strong>
                 </td>
               </tr>
@@ -153,17 +153,17 @@ const Pricing84 = () => {
             <code>KOMV-KINAKT</code> = Inactive indicator.
           </div>
           <div className="code-block">
-            <span className="cm">* KOMP-PSTYV = Item Category</span>
+            <span className="cm">* KOMP-PSTYV = Item Category </span>
             <span className="kw">IF</span> KOMP-PSTYV = 'TANN'.
 
             <span className="cm">* KOMP-UEPOS = Higher Level Item number of this free goods
-              sub-item</span>
+              sub-item </span>
             w_higher_item = KOMP-UEPOS.
 
             <span className="cm">* Pass the higher-level item number into the pricing structure's
-              item field</span>
-            <span className="kw">LOOP AT</span> KOMV
-            <span className="kw">WHERE</span> KPOSN = w_higher_item
+              item field </span>
+            <span className="kw">LOOP AT</span> KOMV&nbsp;
+            <span className="kw">WHERE</span> KPOSN = w_higher_item&nbsp;
             <span className="kw">AND</span> KSCHL = 'PDIS'. KOMV-KINAKT = 'X'.
             <span className="kw">ENDLOOP</span>.
 
@@ -291,8 +291,8 @@ const Pricing84 = () => {
           <div className="callout">
             GST = <strong>Goods and Services Tax</strong>. Which GST condition
             type applies depends on the relationship between the
-            <strong>Plant's state</strong> and the
-            <strong>Ship-To Party's state</strong>.
+            <strong> Plant's state</strong> and the
+            <strong> Ship-To Party's state</strong>.
           </div>
           <table className="table-reponsive">
             <thead>
@@ -342,9 +342,10 @@ const Pricing84 = () => {
             </tbody>
           </table>
           <div className="callout blue">
-            Pattern to remember: interstate sales → IGST alone (JOIG). Intrastate
-            sales → CGST + SGST together (JOCG + JOSG). Union Territory sales →
-            CGST + UGST together (JOCG + JOUG) instead of SGST.
+            Pattern to remember:<br />
+            interstate sales → IGST alone (JOIG). <br />
+            Intrastate sales → CGST + SGST together (JOCG + JOSG).<br />
+            Union Territory sales → CGST + UGST together (JOCG + JOUG) instead of SGST.
           </div>
         </div>
 
@@ -355,8 +356,8 @@ const Pricing84 = () => {
           </h2>
           <div className="stepper">
             <div className="step step-blue">
-              <strong>Assign Tax Procedure to Country</strong> — T-code
-              <span className="tcode">OBBG</span>. Go to Country
+              <strong>Assign Tax Procedure to Country</strong> — T-code&nbsp;
+              <span className="tcode">OBBG</span>. Go to Country&nbsp;
               <strong>IN</strong>, mention Tax Procedure <strong>TAXINN</strong>,
               save.
             </div>
@@ -364,7 +365,7 @@ const Pricing84 = () => {
               <strong>Activate Business Place</strong> — Path: SPRO →
               Cross-Application Components → General Application Functions →
               Business Place → Activate Business Place. If blank, go to New
-              Entries, mention Country <strong>IN</strong>, check
+              Entries, mention Country <strong>IN</strong>, check&nbsp;
               <strong>BP Active</strong>, save.
             </div>
             <div className="step step-blue">

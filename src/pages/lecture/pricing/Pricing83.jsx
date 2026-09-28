@@ -37,9 +37,9 @@ const Pricing83 = () => {
           </h2>
           <div className="callout purple">
             Client requirement: they want to be able to
-            <strong>change the base price in a Quotation</strong>, but
-            <strong>NOT</strong> be able to change it once it becomes a
-            <strong>Sales Order</strong>.
+            <strong> change the base price in a Quotation</strong>, but
+            <strong> NOT</strong> be able to change it once it becomes a
+            <strong> Sales Order</strong>.
           </div>
           <h3>Why Standard Configuration Can't Solve This</h3>
           <div className="callout red">
@@ -81,14 +81,14 @@ const Pricing83 = () => {
           <div className="stepper">
             <div className="step">
               If document category ={" "}
-              <span className="tag tag-quote">Quotation</span>, then for
+              <span className="tag tag-quote">"B" Quotation</span>, then for
               condition type <code>PPR0</code>, set Manual Entries =
-              <strong>C</strong> (editable)
+              <strong> "C"</strong> (editable)
             </div>
             <div className="step">
               If document category ={" "}
-              <span className="tag tag-order">Order</span>, then for condition
-              type <code>PPR0</code>, set Manual Entries =<strong>D</strong>{" "}
+              <span className="tag tag-order">"C" Order</span>, then for condition
+              type <code>PPR0</code>, set Manual Entries =<strong> "D"</strong>{" "}
               (locked)
             </div>
           </div>
@@ -104,14 +104,14 @@ const Pricing83 = () => {
             <span className="cm">
               * KOMK-VBTYP = Document Category (header field)
             </span>
-            <span className="cm">* B = Quotation, C = Order</span>
+            <span className="cm">* B = Quotation, C = Order</span><br />
             <span className="kw">IF</span> KOMK-VBTYP = 'B'.
             <span className="kw">LOOP AT</span> KOMV
-            <span className="kw">WHERE</span> KSCHL = 'PPR0'. KOMV-KMANU = 'C'.
+            <span className="kw"> WHERE</span> KSCHL = 'PPR0'. KOMV-KMANU = 'C'.
             <span className="kw">ENDLOOP</span>.
             <span className="kw">ELSEIF</span> KOMK-VBTYP = 'C'.
             <span className="kw">LOOP AT</span> KOMV
-            <span className="kw">WHERE</span> KSCHL = 'PPR0'. KOMV-KMANU = 'D'.
+            <span className="kw"> WHERE</span> KSCHL = 'PPR0'. KOMV-KMANU = 'D'.
             <span className="kw">ENDLOOP</span>.{" "}
             <span className="kw">ENDIF</span>.
           </div>
@@ -157,17 +157,17 @@ const Pricing83 = () => {
           </h2>
           <div className="callout purple">
             Client requirement: if a customer returns goods
-            <strong>more than 6 months (180 days)</strong> after the original
+            <strong> more than 6 months (180 days)</strong> after the original
             invoice date, the system should automatically
-            <strong>deactivate the GST condition types</strong> on that return
+            <strong> deactivate the GST condition types</strong> on that return
             order.
           </div>
           <h3>Key Background Fact</h3>
           <div className="callout blue">
             When you create a <strong>Return Order</strong> with reference to a
             Billing Document (invoice), the return order's
-            <strong>Pricing Date</strong> field automatically copies the
-            <strong>original invoice date</strong> — this is what makes the age
+            <strong> Pricing Date</strong> field automatically copies the
+            <strong> original invoice date</strong> — this is what makes the age
             calculation possible.
           </div>
           <h3>Solution Design</h3>
@@ -210,9 +210,9 @@ const Pricing83 = () => {
               return orders)
             </span>
             <span className="cm">* KOMK-ERDAT = reference/creation date</span>
-            <span className="kw">IF</span> ( KOMK-PRSDT - KOMK-ERDAT ) &gt; 180.
+            <span className="kw"> IF</span> ( KOMK-PRSDT - KOMK-ERDAT ) &gt; 180.
             <span className="kw">LOOP AT</span> KOMV
-            <span className="kw">WHERE</span> KSCHL = 'JOIG'
+            <span className="kw"> WHERE</span> KSCHL = 'JOIG'
             <span className="kw">OR</span> KSCHL = 'JOCG'
             <span className="kw">OR</span> KSCHL = 'JOSG'. KOMV-KINAKT = 'X'.
             <span className="kw">ENDLOOP</span>.{" "}
@@ -292,7 +292,7 @@ const Pricing83 = () => {
                 <td>3</td>
                 <td>
                   Loop through <code>KOMV</code> (the condition values table)
-                  filtering on the relevant Condition Type(s) via
+                  filtering on the relevant Condition Type(s) via&nbsp;
                   <code>KSCHL</code>
                 </td>
               </tr>
@@ -300,7 +300,7 @@ const Pricing83 = () => {
                 <td>4</td>
                 <td>
                   Dynamically set a control field on the matched condition line
-                  —<code>KMANU</code> (manual entry) or
+                  —<code>KMANU</code> (manual entry) or&nbsp;
                   <code>KINAKT</code> (inactive)
                 </td>
               </tr>
