@@ -452,7 +452,7 @@ const Enterprise12 = () => {
       🏭 <strong>Why these processes exist:</strong> some manufacturers
       (vendors) hold a patent/right to manufacture a specific product but
       lack the infrastructure to market and sell it themselves. A company
-      like Alchem can market and sell that product under its own
+      like Alkem can market and sell that product under its own
       brand/network, even though a different vendor actually manufactures
       it.
      </div>

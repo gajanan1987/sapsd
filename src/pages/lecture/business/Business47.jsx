@@ -246,7 +246,7 @@ const Business47 = () => {
      </table>
      <div className="callout blue">
       📊 <strong>Worked example:</strong> Customer
-      <strong>Alchem Laboratories Ltd</strong> (customer
+      <strong>Alkem Laboratories Ltd</strong> (customer
       <code>100640</code>) accepts consignment terms for a new material
       (e.g., <code>VACCINE9999</code>) — starting Unrestricted Stock:
       <code>50,000</code> units. Company fills up <code>10,000</code> units
@@ -647,7 +647,7 @@ const Business47 = () => {
        <tr>
         <td>Consignment Fill-Up worked example</td>
         <td>
-         Customer Alchem Labs (100640), material VACCINE9999,
+         Customer Alkem Labs (100640), material VACCINE9999,
          Unrestricted Stock 50,000 → 40,000 after 10,000-unit fill-up;
          Consignment Stock 0 → 10,000
         </td>

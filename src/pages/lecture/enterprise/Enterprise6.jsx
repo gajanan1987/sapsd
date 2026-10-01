@@ -59,7 +59,7 @@ const Enterprise6 = () => {
      </p>
      <p className="note-text">
       📌 This HDFC example is purely for understanding the concept — it
-      is not related to Alchem, our actual project client.
+      is not related to Alkem, our actual project client.
      </p>
      <table className="table-reponsive">
       <thead>
@@ -463,7 +463,7 @@ const Enterprise6 = () => {
         <th>Unit</th>
         <th>Responsible</th>
         <th>Length</th>
-        <th>Count (Alchem)</th>
+        <th>Count (Alkem)</th>
        </tr>
       </thead>
       <tbody>
@@ -607,11 +607,11 @@ const Enterprise6 = () => {
       </thead>
       <tbody>
        <tr>
-        <td>Sales Group (Alchem)</td>
+        <td>Sales Group (Alkem)</td>
         <td>P10 = Insulin &amp; Antibiotic Group; P20 = Other Group</td>
        </tr>
        <tr>
-        <td>Manufacturing Plants (Alchem)</td>
+        <td>Manufacturing Plants (Alkem)</td>
         <td>P100 = Mumbai Manufacturing Plant; P200 = Vapi Manufacturing Plant</td>
        </tr>
        <tr>

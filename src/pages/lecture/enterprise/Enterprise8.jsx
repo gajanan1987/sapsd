@@ -48,7 +48,7 @@ const Enterprise8 = () => {
      <div className="stepper">
       <div className="step">
        <strong>New Entries</strong> → enter Code <code>P100</code>, Company
-       Name <code>Alchem Laboratories Limited</code>, City
+       Name <code>Alkem Laboratories Limited</code>, City
        <code>Mumbai</code>, Country <code>IN</code>, Currency
        <code>INR</code>, Language <code>EN</code>.
       </div>
@@ -174,7 +174,7 @@ const Enterprise8 = () => {
       </div>
       <div className="step">
        Code <code>P100</code>, Name
-       <code>Alchem Domestic Sales Organization</code>, Currency
+       <code>Alkem Domestic Sales Organization</code>, Currency
        <code>INR</code>, Sales Organization Calendar
        <code>01</code> (standard calendar, used until a custom one is
        created later) → Enter (a warning message may appear — this is
@@ -189,7 +189,7 @@ const Enterprise8 = () => {
       <div className="step">
        Repeat with <strong>New Entries</strong> for the second Sales
        Organization: Code <code>P200</code>, Name
-       <code>Alchem Export Sales Organization</code>, same Currency and
+       <code>Alkem Export Sales Organization</code>, same Currency and
        Calendar settings, its own address details → Save.
       </div>
      </div>
@@ -598,14 +598,14 @@ const Enterprise8 = () => {
        <tr>
         <td>Company Code created</td>
         <td>
-         P100, Alchem Laboratories Limited, Mumbai, IN, Currency INR,
+         P100, Alkem Laboratories Limited, Mumbai, IN, Currency INR,
          Language EN, Region 13
         </td>
        </tr>
        <tr>
         <td>Sales Organizations created</td>
         <td>
-         P100 Alchem Domestic Sales Organization; P200 Alchem Export
+         P100 Alkem Domestic Sales Organization; P200 Alkem Export
          Sales Organization — both Currency INR, Calendar 01
         </td>
        </tr>
@@ -647,7 +647,7 @@ const Enterprise8 = () => {
      <h2><span className="badge">📝</span> Summary</h2>
      <p>
       This lecture moved from theory into live, hands-on configuration.
-      <strong>Company Code</strong> (P100, Alchem Laboratories Limited) was
+      <strong>Company Code</strong> (P100, Alkem Laboratories Limited) was
       created via SPRO → Enterprise Structure → Definition → Financial
       Accounting, including full address data (search term, mandatory-field
       rules, region lookup) and the first-time

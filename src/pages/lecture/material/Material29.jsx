@@ -57,7 +57,7 @@ const Material29 = () => {
       </tbody>
      </table>
      <div className="callout">
-      📌 <strong>Not used in this project:</strong> Alchem's customers are
+      📌 <strong>Not used in this project:</strong> Alkem's customers are
       dealers, distributors, and hospitals — not industrial customers — so
       this field isn't relevant here. It's still demonstrated for
       completeness.
@@ -582,7 +582,7 @@ const Material29 = () => {
      <p>
       This lecture continued the Customer Master field walkthrough:
       <strong>Industry</strong> groups customers by the industry they belong
-      to (not used in this project, since Alchem sells to
+      to (not used in this project, since Alkem sells to
       dealers/distributors/hospitals rather than industrial buyers),
       <strong>Annual Sales</strong> (Key Figures) stores last year's sales
       for comparison, and <strong>Regional Market</strong>

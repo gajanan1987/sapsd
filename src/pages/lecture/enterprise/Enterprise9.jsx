@@ -763,15 +763,15 @@ const Enterprise9 = () => {
       </thead>
       <tbody>
        <tr>
-        <td>Sales Office (Alchem, practice)</td>
+        <td>Sales Office (Alkem, practice)</td>
         <td>P100, Telangana Sales Office (1 of 25 real offices)</td>
        </tr>
        <tr>
-        <td>Sales Groups (Alchem)</td>
+        <td>Sales Groups (Alkem)</td>
         <td>P10 Insulin &amp; Antibiotic, P20 Other Group</td>
        </tr>
        <tr>
-        <td>Manufacturing Plants (Alchem)</td>
+        <td>Manufacturing Plants (Alkem)</td>
         <td>P100 Mumbai, P200 Vapi — Factory Calendar 01 on both</td>
        </tr>
        <tr>

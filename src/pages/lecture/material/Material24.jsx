@@ -251,7 +251,7 @@ const Material24 = () => {
      <div className="stepper">
       <div className="step">
        Go to <span className="tcode">V/08</span> → New Entries → define
-       your own procedure (e.g. <code>P401</code>, description "Alchem
+       your own procedure (e.g. <code>P401</code>, description "Alkem
        Pricing Procedure").
       </div>
       <div className="step">
@@ -546,7 +546,7 @@ const Material24 = () => {
        </tr>
        <tr>
         <td>Custom Pricing Procedure</td>
-        <td>P401, "Alchem Pricing Procedure"</td>
+        <td>P401, "Alkem Pricing Procedure"</td>
        </tr>
        <tr>
         <td>Pricing Procedure control step</td>

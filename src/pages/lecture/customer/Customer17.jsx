@@ -212,7 +212,7 @@ const Customer17 = () => {
        <tr>
         <td>Alphanumeric</td>
         <td>A combination of characters and numbers</td>
-        <td><code>ALCHEM0004012</code></td>
+        <td><code>Alkem0004012</code></td>
        </tr>
        <tr>
         <td>Character</td>

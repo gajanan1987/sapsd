@@ -223,15 +223,15 @@ const Enterprise1 = () => {
             Partner &amp; Consultants
           </h2>
           <p>
-            Continuing last class's running example: <strong>Alchem
+            Continuing last class's running example: <strong>Alkem
               Laboratories Limited</strong> — a pharma company — is the
             <strong>client</strong> that wants to implement SAP.
             <strong>TCS</strong> is the <strong>implementation
               partner</strong> — the software company chosen to implement SAP
-            for Alchem.
+            for Alkem.
           </p>
           <div className="flow">
-            <div className="flow-step">Alchem Laboratories (Client)</div>
+            <div className="flow-step">Alkem Laboratories (Client)</div>
             <div className="arrow">➜</div>
             <div className="flow-step flow-teal">TCS (Implementation Partner)</div>
             <div className="arrow">➜</div>
@@ -239,7 +239,7 @@ const Enterprise1 = () => {
           </div>
           <p>
             Consultants are <strong>employees of TCS</strong>. Through TCS,
-            consultants go to Alchem's place and implement SAP — studying the
+            consultants go to Alkem's place and implement SAP — studying the
             client's business process and configuring it into the system.
           </p>
           <p className="note-text">
@@ -304,7 +304,7 @@ const Enterprise1 = () => {
                 </td>
               </tr>
               <tr>
-                <td>Client (e.g., Alchem Laboratories)</td>
+                <td>Client (e.g., Alkem Laboratories)</td>
                 <td>
                   Vice President – IT, Vice President – Finance, their
                   Project Manager, their Technical Experts
@@ -335,7 +335,7 @@ const Enterprise1 = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Number of users at Alchem (example)</td>
+                <td>Number of users at Alkem (example)</td>
                 <td>1,500</td>
               </tr>
               <tr>
